@@ -22,6 +22,7 @@ from .config import (
     DATA_DIR,
     GUIDE_DIR,
     HERO_TEMPLATE_DIR,
+    HEROES_PATH,
     SAMPLES_DIR,
     STATIC_DIR,
     TEMPLATE_DIR,
@@ -183,6 +184,8 @@ class Handler(BaseHTTPRequestHandler):
                 return self._serve_file(ART_DIR / rel)
             if path == "/api/status":
                 return self._status()
+            if path == "/api/art-check":
+                return self._art_check()
             if path == "/api/catalog":
                 return self._catalog()
             if path == "/api/heroes":
@@ -232,7 +235,7 @@ class Handler(BaseHTTPRequestHandler):
         self._json(
             {
                 "ok": True,
-                "version": "0.1.0",
+                "version": "0.2.2",
                 "heroes": len(rec.heroes),
                 "portraits": portrait_count,
                 "schools": len(rec.schools),
@@ -275,6 +278,28 @@ class Handler(BaseHTTPRequestHandler):
         ]
         self._json({"ok": True, "schools": schools, "heroes": heroes})
 
+    def _art_check(self) -> None:
+        data = load_json(HEROES_PATH, {}) or {}
+        heroes = data.get("heroes", [])
+        counts = {"art": 0, "talent_icon": 0, "ultimate_icon": 0}
+        missing = []
+        for hero in heroes:
+            for key in counts:
+                rel = hero.get(key)
+                if rel and (BASE_DIR / rel).is_file():
+                    counts[key] += 1
+                else:
+                    missing.append({"hero": hero.get("name"), "key": key, "path": rel or ""})
+        self._json(
+            {
+                "ok": bool(heroes) and not missing,
+                "version": "0.2.2",
+                "heroes": len(heroes),
+                **counts,
+                "missing": missing[:30],
+            }
+        )
+
     def _heroes(self) -> None:
         _, adv = init_engines()
         guide_map = guide_store.load_guides()
@@ -312,6 +337,10 @@ class Handler(BaseHTTPRequestHandler):
                     "heroes": len(heroes),
                     "cards": len(adv.cards.get("cards", [])),
                     "guides": len(guide_map),
+                    "version": "0.2.2",
+                    "art": sum(1 for h in adv.heroes if h.get("art") and (BASE_DIR / h["art"]).is_file()),
+                    "talent_icons": sum(1 for h in adv.heroes if h.get("talent_icon") and (BASE_DIR / h["talent_icon"]).is_file()),
+                    "ultimate_icons": sum(1 for h in adv.heroes if h.get("ultimate_icon") and (BASE_DIR / h["ultimate_icon"]).is_file()),
                     "tier_note": "强度为初始整理/面板估算，不是官方胜率；可在 data/heroes.json 校正。",
                 },
             }

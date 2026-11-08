@@ -111,6 +111,15 @@ class ApiTest(unittest.TestCase):
         self.assertEqual(status, 200)
         self.assertTrue(rules["rules"]["attributes"])
 
+        status, art = self._request("GET", "/api/art-check")
+        self.assertEqual(status, 200)
+        self.assertTrue(art["ok"])
+        self.assertEqual(art["heroes"], 60)
+        self.assertEqual(art["art"], 60)
+        self.assertEqual(art["talent_icon"], 60)
+        self.assertEqual(art["ultimate_icon"], 60)
+        self.assertEqual(data["meta"]["art"], 60)
+
     def test_overlay_trigger_requires_agent(self):
         import app.server as server
 

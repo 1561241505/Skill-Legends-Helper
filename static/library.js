@@ -16,6 +16,21 @@
 
   const TIER_RANK = { S: 5, A: 4, B: 3, C: 2, D: 1, "?": 0 };
   const DIFFICULTY = { 1: "简单", 2: "中等", 3: "偏难" };
+  let artErrors = 0;
+
+  function showAlert(message) {
+    const el = $("#libAlert");
+    if (!el) return;
+    el.hidden = false;
+    el.textContent = message;
+  }
+
+  function onArtError() {
+    artErrors += 1;
+    if (artErrors === 1) {
+      showAlert("英雄图片加载失败。请确认是通过 http://127.0.0.1:8777/library 打开的，并检查 /api/art-check 的返回；如果显示 0/60，说明还在跑旧版服务，关掉旧控制台后重新运行 启动助手.bat。");
+    }
+  }
 
   function escapeHtml(value) {
     return String(value == null ? "" : value)
@@ -39,6 +54,10 @@
   }
 
   async function init() {
+    if (window.location.protocol === "file:") {
+      showAlert("不要直接双击 library.html。请先运行 启动助手.bat，然后打开 http://127.0.0.1:8777/library。");
+      return;
+    }
     try {
       const [heroData, cardData, ruleData] = await Promise.all([
         fetch("/api/heroes").then((r) => r.json()),
@@ -53,6 +72,12 @@
       $("#libHeroCount").textContent = state.heroes.length;
       $("#libCardCount").textContent = state.cards.length;
       $("#tierNote").textContent = (heroData.meta && heroData.meta.tier_note) || "";
+      const meta = heroData.meta || {};
+      if (!meta.version) {
+        showAlert("当前服务端还是旧版本（没有图片素材字段）。请关掉旧的助手/网页控制台窗口，重新运行 启动助手.bat，再按 Ctrl+F5。");
+      } else if (Number(meta.art || 0) < state.heroes.length) {
+        showAlert("图片素材没有完整加载：" + Number(meta.art || 0) + "/" + state.heroes.length + "。请确认 data/art 目录存在，然后重启助手并强制刷新页面。");
+      }
       fillSchoolSelects();
       bindEvents();
       renderHeroes();
@@ -150,6 +175,7 @@
     $$(".hero-tile").forEach((tile) => {
       tile.addEventListener("click", () => selectHero(tile.dataset.name));
     });
+    $$(".hero-tile img").forEach((img) => img.addEventListener("error", onArtError));
   }
 
   function selectHero(name) {
@@ -223,6 +249,7 @@
       '<div class="detail-section"><div class="detail-title">核心卡 · 优先围绕主系抓取</div><div class="core-list">' + (core || '<p class="tiny-note">暂无匹配卡牌</p>') + "</div></div>" +
       '<div class="detail-section"><div class="detail-title">怕的体系</div><div class="counter-list">' + counters + "</div></div>" +
       '<div class="detail-section"><div class="detail-title">攻略</div><div id="guideSlot"><p class="tiny-note">加载攻略…</p></div></div>';
+    $$("#heroDetail img").forEach((img) => img.addEventListener("error", onArtError));
     loadGuide(hero);
   }
 
