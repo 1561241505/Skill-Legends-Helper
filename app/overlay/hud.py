@@ -99,6 +99,22 @@ def _chip(draw: ImageDraw.ImageDraw, x: int, y: int, text: str, color: Tuple[int
     return width
 
 
+def _skill_icon(path: str, size: Tuple[int, int] = (18, 18)) -> Optional[Image.Image]:
+    if not path:
+        return None
+    candidate = Path(path)
+    if not candidate.is_absolute():
+        candidate = BASE_DIR / candidate
+    try:
+        if candidate.exists():
+            icon = Image.open(candidate).convert("RGBA")
+            icon.thumbnail(size, Image.LANCZOS)
+            return icon
+    except Exception:
+        return None
+    return None
+
+
 def _rarity_color(rarity: int) -> Tuple[int, int, int]:
     if rarity >= 3:
         return GOLD
@@ -273,6 +289,16 @@ def render_result(
     draw.text((114, 88), meta_line, font=_font(12), fill=MUTED)
     if not top.get("has_guide"):
         draw.text((114, 110), "暂无完整攻略，结论仅供参考", font=_font(10), fill=(206, 160, 98))
+
+    # talent / ultimate icons
+    talent = _skill_icon(top.get("talent_icon", ""))
+    if talent is not None:
+        image.paste(talent, (114, 126), talent)
+    draw.text((136, 128), "天赋", font=_font(8.5), fill=DIM)
+    ultimate = _skill_icon(top.get("ultimate_icon", ""))
+    if ultimate is not None:
+        image.paste(ultimate, (178, 126), ultimate)
+    draw.text((200, 128), "大招", font=_font(8.5), fill=DIM)
 
     # reasons
     draw.text((22, 166), "为什么", font=_font(10, True), fill=GOLD_DIM)
