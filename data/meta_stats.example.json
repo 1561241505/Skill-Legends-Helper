@@ -1,0 +1,8 @@
+{
+  "note": "把本文件复制为 data/meta_stats.json 后生效。win_rate / pick_rate 使用 0-1 的小数；没有数据的英雄按中性 50 分处理。",
+  "heroes": {
+    "神秘法师": { "win_rate": 0.53, "pick_rate": 0.18 },
+    "守财奴": { "win_rate": 0.55, "pick_rate": 0.12 },
+    "熊猫": { "win_rate": 0.52, "pick_rate": 0.16 }
+  }
+}

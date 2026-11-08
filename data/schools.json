@@ -1,0 +1,278 @@
+{
+  "meta": {
+    "patch": "2026.10",
+    "note": "13 个流派的静态资料。流派强度与克制关系为初始示例，可自行调整。",
+    "source": "游戏规则.txt / 卡牌库.xlsx"
+  },
+  "schools": [
+    {
+      "id": "basic",
+      "name": "普攻流",
+      "short": "普攻",
+      "color": "#6f8fc9",
+      "icon": "data/templates/schools/basic.png",
+      "summary": "以普攻、攻速与攻击力为核心的持续输出体系，靠平A触发各类附加效果，越打越强。",
+      "ban_impact": "依赖平A叠层和攻击触发的英雄输出明显下滑。",
+      "tags": [
+        "持续输出",
+        "物理"
+      ],
+      "pairs": [
+        "haste",
+        "crit",
+        "spirit"
+      ],
+      "faction_id": 1,
+      "mechanics": "以普攻、攻速与攻击力为核心的持续输出；普攻触发类卡牌收益最高。",
+      "card_count": 18
+    },
+    {
+      "id": "ultimate",
+      "name": "大招流",
+      "short": "大招",
+      "color": "#7fd6c0",
+      "icon": "data/templates/schools/ultimate.png",
+      "summary": "围绕能量回复、大招释放频率与单次爆发构建，金色大招是质变点。",
+      "ban_impact": "回能型、爆发型英雄的节奏被拖慢，单核大招体系很难成型。",
+      "tags": [
+        "爆发",
+        "回能"
+      ],
+      "pairs": [
+        "haste",
+        "spirit",
+        "vulnerable"
+      ],
+      "faction_id": 6,
+      "mechanics": "能量满 100 自动释放大招；失去生命也会回复能量，围绕回能与大招频率构筑。",
+      "card_count": 18
+    },
+    {
+      "id": "shield",
+      "name": "护盾流",
+      "short": "护盾",
+      "color": "#b98a5e",
+      "icon": "data/templates/schools/shield.png",
+      "summary": "叠盾、护盾转伤与反伤，偏中后期的阵地战体系，克制纯爆发。",
+      "ban_impact": "靠护盾转化伤害和拖后期的英雄少了一条稳定成长曲线。",
+      "tags": [
+        "防御",
+        "中后期"
+      ],
+      "pairs": [
+        "life",
+        "vulnerable"
+      ],
+      "faction_id": 9,
+      "mechanics": "每层护盾减少 1 点伤害（神圣伤害除外），减伤后层数降低，与易伤相互抵消。",
+      "card_count": 18
+    },
+    {
+      "id": "rage",
+      "name": "怒气流",
+      "short": "怒气",
+      "color": "#c04343",
+      "icon": "data/templates/schools/rage.png",
+      "summary": "围绕怒气获取与消耗强化技能循环，兼顾爆发与频率。",
+      "ban_impact": "怒气循环型英雄的技能频率和爆发窗口减少。",
+      "tags": [
+        "循环",
+        "爆发"
+      ],
+      "pairs": [
+        "haste",
+        "crit"
+      ],
+      "faction_id": 12,
+      "mechanics": "损失生命增加怒气；怒气达到 100 进入 2.5 秒狂怒，伤害增幅最高 85%。",
+      "card_count": 18
+    },
+    {
+      "id": "heal",
+      "name": "回复流",
+      "short": "回复",
+      "color": "#d8b52b",
+      "icon": "data/templates/schools/heal.png",
+      "summary": "吸血、治疗与回复转伤，提供续航和法阵类持续作战能力。",
+      "ban_impact": "续航型英雄的容错率下降，长局容易被消耗致死。",
+      "tags": [
+        "续航",
+        "法阵"
+      ],
+      "pairs": [
+        "life",
+        "poison",
+        "dodge"
+      ],
+      "faction_id": 5,
+      "mechanics": "治疗、吸血与回复转伤；需要站场时间，怕易伤的高倍率爆发。",
+      "card_count": 18
+    },
+    {
+      "id": "poison",
+      "name": "中毒流",
+      "short": "中毒",
+      "color": "#6fbf73",
+      "icon": "data/templates/schools/poison.png",
+      "summary": "持续毒伤与叠毒，擅长处理高生命、高减伤的坦克，伤害不看闪避。",
+      "ban_impact": "毒系英雄失去主要输出手段，坦克类对手更难处理。",
+      "tags": [
+        "持续伤害",
+        "克制坦克"
+      ],
+      "pairs": [
+        "vulnerable",
+        "heal"
+      ],
+      "faction_id": 7,
+      "mechanics": "每 0.7 秒受到等于当前中毒层数的中毒伤害，同时层数降低；适合处理高生命坦克。",
+      "card_count": 18
+    },
+    {
+      "id": "spirit",
+      "name": "精灵流",
+      "short": "精灵",
+      "color": "#f2a9cf",
+      "icon": "data/templates/schools/spirit.png",
+      "summary": "召唤精灵、精灵弹幕与灵伤，百搭副系，能和普攻、怒气、毒等体系联动。",
+      "ban_impact": "缺少一个万用副系，英雄的补伤害和成长空间变窄。",
+      "tags": [
+        "召唤",
+        "百搭副系"
+      ],
+      "pairs": [
+        "basic",
+        "rage",
+        "ultimate",
+        "poison"
+      ],
+      "faction_id": 11,
+      "mechanics": "学习精灵流技能后默认召唤 50 生命的小精灵，与英雄灵魂链分担 30% 伤害，多精灵共同分担。",
+      "card_count": 18
+    },
+    {
+      "id": "haste",
+      "name": "急速流",
+      "short": "急速",
+      "color": "#a9c9dd",
+      "icon": "data/templates/schools/haste.png",
+      "summary": "提升攻速、冷却与回能速度，放大普攻和大招体系的频率优势。",
+      "ban_impact": "攻速/回能型英雄的启动速度和上限同时下降。",
+      "tags": [
+        "攻速",
+        "回能"
+      ],
+      "pairs": [
+        "basic",
+        "ultimate",
+        "rage"
+      ],
+      "faction_id": 13,
+      "mechanics": "每层急速增加周期技能释放速度，每秒降低层数，与冰冻相互抵消。",
+      "card_count": 18
+    },
+    {
+      "id": "dodge",
+      "name": "闪避流",
+      "short": "闪避",
+      "color": "#6f9fd8",
+      "icon": "data/templates/schools/dodge.png",
+      "summary": "靠闪避触发收益，克制普攻与单体平A，但怕毒、必中和持续伤害。",
+      "ban_impact": "闪避触发型英雄的核心防御手段消失，生存上限下降。",
+      "tags": [
+        "防御",
+        "克制普攻"
+      ],
+      "pairs": [
+        "heal",
+        "life"
+      ],
+      "faction_id": 2,
+      "mechanics": "每点闪避 = 1% 闪避率；默认只有物理伤害能被闪避。",
+      "card_count": 18
+    },
+    {
+      "id": "crit",
+      "name": "暴击流",
+      "short": "暴击",
+      "color": "#d9534f",
+      "icon": "data/templates/schools/crit.png",
+      "summary": "堆暴击率与暴伤，追求单次爆发上限，怕减伤、护盾和闪避。",
+      "ban_impact": "爆发上限被削，靠暴击收益的英雄只能走平稳路线。",
+      "tags": [
+        "爆发",
+        "上限"
+      ],
+      "pairs": [
+        "basic",
+        "rage",
+        "haste"
+      ],
+      "faction_id": 3,
+      "mechanics": "每点暴击 = 1% 暴击率；默认只有物理伤害可暴击，暴击伤害 200%。",
+      "card_count": 18
+    },
+    {
+      "id": "life",
+      "name": "生命流",
+      "short": "生命",
+      "color": "#e8a05a",
+      "icon": "data/templates/schools/life.png",
+      "summary": "提升生命上限、生命偷取与生命转伤，兼顾坦度和成长。",
+      "ban_impact": "坦克和生命成长型英雄的站场能力下降。",
+      "tags": [
+        "坦度",
+        "成长"
+      ],
+      "pairs": [
+        "shield",
+        "heal",
+        "freeze"
+      ],
+      "faction_id": 4,
+      "mechanics": "提升最大生命、生命偷取与生命转伤，兼顾坦度与成长。",
+      "card_count": 18
+    },
+    {
+      "id": "freeze",
+      "name": "冰冻流",
+      "short": "冰冻",
+      "color": "#8fc7e8",
+      "icon": "data/templates/schools/freeze.png",
+      "summary": "冰冻控制与冰伤，限制对手的输出节奏，适合频率流和法系。",
+      "ban_impact": "控场能力缺失，攻速/大招体系少了一个天敌。",
+      "tags": [
+        "控制",
+        "法系"
+      ],
+      "pairs": [
+        "life",
+        "vulnerable"
+      ],
+      "faction_id": 8,
+      "mechanics": "每层冰冻降低攻速与弹道速度，每秒降低层数，与急速相互抵消。",
+      "card_count": 18
+    },
+    {
+      "id": "vulnerable",
+      "name": "易伤流",
+      "short": "易伤",
+      "color": "#9b6fc9",
+      "icon": "data/templates/schools/vulnerable.png",
+      "summary": "叠加易伤放大后续伤害，常与毒、大招、护盾转伤搭配，追求增伤乘区。",
+      "ban_impact": "增伤乘区消失，毒系与爆发体系的斩杀线下降。",
+      "tags": [
+        "增伤",
+        "斩杀"
+      ],
+      "pairs": [
+        "poison",
+        "ultimate",
+        "shield"
+      ],
+      "faction_id": 10,
+      "mechanics": "每层易伤使每次伤害额外 +1，结算后层数降低，与护盾相互抵消。",
+      "card_count": 18
+    }
+  ]
+}

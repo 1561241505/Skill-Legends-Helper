@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>英雄图鉴 · 选技大乱斗助手</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" href="/static/library.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <div class="grain"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">选</div>
+      <div class="brand-copy">
+        <h1>选技大乱斗 <span>英雄图鉴</span></h1>
+        <p>60 英雄 · 156 张卡牌 · 13 流派 · 核心卡与克制关系</p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <div class="stat"><b id="libHeroCount">--</b><span>英雄</span></div>
+      <div class="stat"><b id="libCardCount">--</b><span>卡牌</span></div>
+      <a class="btn ghost" href="/">开局分析</a>
+      <a class="btn ghost" href="/library#heroes" data-nav="heroes">英雄</a>
+      <a class="btn ghost" href="/library#cards" data-nav="cards">卡牌</a>
+      <a class="btn ghost" href="/library#rules" data-nav="rules">规则</a>
+    </div>
+  </header>
+
+  <main class="lib-workspace">
+    <section id="heroesView" class="lib-view">
+      <div class="lib-heading">
+        <div>
+          <span class="eyebrow">HERO LAB</span>
+          <h2>英雄图鉴与核心卡</h2>
+        </div>
+        <p id="tierNote" class="tiny-note"></p>
+      </div>
+      <div class="lib-toolbar">
+        <input id="heroSearch" class="lib-input" type="search" placeholder="搜索英雄名 / 定位…" autocomplete="off">
+        <select id="heroSchool" class="lib-select"><option value="">全部流派</option></select>
+        <select id="heroSort" class="lib-select">
+          <option value="power">按强度排序</option>
+          <option value="tier">按评级排序</option>
+          <option value="name">按名称排序</option>
+          <option value="cards">按核心卡数量</option>
+        </select>
+        <span id="heroResultCount" class="lib-count"></span>
+      </div>
+      <div class="lib-layout">
+        <div id="heroGrid" class="hero-grid"></div>
+        <aside id="heroDetail" class="hero-detail">
+          <div class="detail-empty">
+            <div class="detail-empty-mark">?</div>
+            <h3>选择一个英雄</h3>
+            <p>查看基础面板、天赋/大招、推荐流派、核心卡与克制关系。</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="cardsView" class="lib-view" hidden>
+      <div class="lib-heading">
+        <div>
+          <span class="eyebrow">CARD INDEX</span>
+          <h2>卡牌库</h2>
+        </div>
+        <p class="tiny-note">卡牌数值来自卡牌库.xlsx；{valN} 按基础值 × N 展示</p>
+      </div>
+      <div class="lib-toolbar">
+        <input id="cardSearch" class="lib-input" type="search" placeholder="搜索卡牌名 / 效果…" autocomplete="off">
+        <select id="cardSchool" class="lib-select"><option value="">全部流派</option></select>
+        <select id="cardRarity" class="lib-select">
+          <option value="">全部稀有度</option>
+          <option value="3">传说</option>
+          <option value="2">稀有</option>
+          <option value="1">普通</option>
+        </select>
+        <span id="cardResultCount" class="lib-count"></span>
+      </div>
+      <div id="cardGrid" class="card-grid"></div>
+    </section>
+
+    <section id="rulesView" class="lib-view" hidden>
+      <div class="lib-heading">
+        <div>
+          <span class="eyebrow">RULEBOOK</span>
+          <h2>规则速查</h2>
+        </div>
+        <p class="tiny-note">来源：游戏规则.txt</p>
+      </div>
+      <div id="rulesContent" class="rules-content"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>本地运行 · 数据来自你提供的英雄/卡牌/规则表</span>
+    <span class="dot"></span>
+    <a href="/">返回开局分析</a>
+  </footer>
+
+  <script src="/static/library.js"></script>
+</body>
+</html>

@@ -1,0 +1,1993 @@
+{
+  "meta": {
+    "patch": "2026.11",
+    "count": 60,
+    "note": "英雄基础属性、天赋、大招来自选技英雄数据.xlsx；流派契合与强度为初始整理/面板估算，可在本文件中校正。",
+    "sources": [
+      "选技英雄数据.xlsx",
+      "卡牌库.xlsx",
+      "游戏规则.txt"
+    ]
+  },
+  "heroes": [
+    {
+      "id": "blade_chief",
+      "name": "刀锋酋长",
+      "aliases": [
+        "刀锋",
+        "酋长"
+      ],
+      "role": "普攻成长型核心",
+      "difficulty": 1,
+      "tier": "A",
+      "tier_source": "社区示例",
+      "power": 86,
+      "schools": {
+        "basic": 1.0,
+        "spirit": 0.85,
+        "crit": 0.5
+      },
+      "weak_to": [
+        "freeze",
+        "dodge"
+      ],
+      "summary": "每回合稳定获得攻击成长，长期发育能堆出天花板级攻击面板；普攻流与精灵流的新手首选。",
+      "portrait": "",
+      "stats": {
+        "hp": 1200,
+        "attack": 26,
+        "attack_speed": 1.7,
+        "energy_regen": 10,
+        "dodge": 16,
+        "crit": 16
+      },
+      "talent": "每进行1场战斗，增加自身2点攻击力",
+      "ultimate": "劈出刀光飞向敌人，对敌人造成（130+自身攻击*4）点物理伤害。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hidden_blade",
+      "name": "隐匿之刃",
+      "aliases": [
+        "隐匿",
+        "隐刃"
+      ],
+      "role": "闪避刺客",
+      "difficulty": 2,
+      "tier": "B",
+      "tier_source": "社区示例",
+      "power": 80,
+      "schools": {
+        "dodge": 1.0,
+        "crit": 0.6,
+        "basic": 0.5
+      },
+      "weak_to": [
+        "poison",
+        "vulnerable"
+      ],
+      "summary": "闪避流核心，成型后能堆出全游戏顶尖闪避；但单走闪避容错低，最好搭配回复/生命。",
+      "portrait": "",
+      "stats": {
+        "hp": 1000,
+        "attack": 18,
+        "attack_speed": 2.4,
+        "energy_regen": 10,
+        "dodge": 16,
+        "crit": 16
+      },
+      "talent": "突破极限！隐匿之刃的闪避上限提升5点。且每次英雄升级，增加自身1点闪避。",
+      "ultimate": "投掷2把苦无，每把苦无对敌人造成120点魔法伤害，同时临时增加自身12点闪避，持续4秒。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_03",
+      "name": "狂暴战将",
+      "aliases": [
+        "狂暴",
+        "战将"
+      ],
+      "role": "暴击爆发",
+      "difficulty": 2,
+      "tier": "C",
+      "tier_source": "面板估算",
+      "power": 75.5,
+      "schools": {
+        "crit": 1.0,
+        "rage": 0.6,
+        "basic": 0.5
+      },
+      "weak_to": [
+        "shield",
+        "dodge"
+      ],
+      "summary": "暴击爆发。天赋：暴击伤害倍率增加40%；大招：扔出一枚炸弹，对敌人造成（240+暴击*3）点神圣伤害，同时减少敌人",
+      "portrait": "",
+      "stats": {
+        "hp": 1000,
+        "attack": 20,
+        "attack_speed": 2.5,
+        "energy_regen": 10,
+        "dodge": 14,
+        "crit": 23
+      },
+      "talent": "暴击伤害倍率增加40%",
+      "ultimate": "扔出一枚炸弹，对敌人造成（240+暴击*3）点神圣伤害，同时减少敌人同样数值的最大生命上限。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "dwarf_lord",
+      "name": "矮人领主",
+      "aliases": [
+        "矮人"
+      ],
+      "role": "生命/护盾坦克",
+      "difficulty": 1,
+      "tier": "B",
+      "tier_source": "社区示例",
+      "power": 76,
+      "schools": {
+        "life": 1.0,
+        "shield": 0.6,
+        "vulnerable": 0.5
+      },
+      "weak_to": [
+        "poison",
+        "vulnerable"
+      ],
+      "summary": "生命与护盾的坦克体系，靠最大生命成长和护盾拖后期；怕毒和易伤的高倍率伤害。",
+      "portrait": "",
+      "stats": {
+        "hp": 1400,
+        "attack": 19,
+        "attack_speed": 1.8,
+        "energy_regen": 10,
+        "dodge": 14,
+        "crit": 15
+      },
+      "talent": "每进行1场战斗，增加自身25点最大生命值",
+      "ultimate": "投掷钢锤飞向敌人，造成(180+英雄最大生命*6%)点魔法伤害。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "panda",
+      "name": "熊猫武士",
+      "aliases": [
+        "熊猫人",
+        "熊猫"
+      ],
+      "role": "回复流坦克",
+      "difficulty": 1,
+      "tier": "S",
+      "tier_source": "社区示例",
+      "power": 90,
+      "schools": {
+        "heal": 1.0,
+        "life": 0.8,
+        "shield": 0.4
+      },
+      "weak_to": [
+        "vulnerable",
+        "freeze"
+      ],
+      "summary": "回复流核心，法阵配合医疗爆炸，操作简单、成型稳定，是新手冲层和吃鸡的常用答案。",
+      "portrait": "",
+      "stats": {
+        "hp": 1200,
+        "attack": 18,
+        "attack_speed": 2.0,
+        "energy_regen": 10,
+        "dodge": 15,
+        "crit": 18
+      },
+      "talent": "每当自身受到伤害时，35%概率回复（英雄等级+5）点生命。",
+      "ultimate": "立即回复120点生命，同时抛出一坛美酒，对敌人造成200点魔法伤害。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "mystic_mage",
+      "name": "神秘法师",
+      "aliases": [
+        "大法师",
+        "法师"
+      ],
+      "role": "法系大招核心",
+      "difficulty": 2,
+      "tier": "S",
+      "tier_source": "社区示例",
+      "power": 90,
+      "schools": {
+        "ultimate": 1.0,
+        "spirit": 0.8,
+        "haste": 0.6,
+        "heal": 0.35
+      },
+      "weak_to": [
+        "freeze",
+        "crit"
+      ],
+      "summary": "初始回能极高，靠高频大招和被动叠伤打持续爆发；需要站得住，不适合一波定胜负的速爆发局。",
+      "portrait": "data/templates/heroes/mystic_mage.png",
+      "stats": {
+        "hp": 1100,
+        "attack": 19,
+        "attack_speed": 2.0,
+        "energy_regen": 15,
+        "dodge": 15,
+        "crit": 13
+      },
+      "talent": "战斗开始后，每释放1次大招，都会使下一次大招伤害提升50%，最多提升300%。",
+      "ultimate": "召唤一只由能量构成的法球飞向敌人，对敌人造成（220+英雄等级*15）点魔法伤害。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "plague_witch",
+      "name": "剧毒巫师",
+      "aliases": [
+        "毒巫师",
+        "毒法"
+      ],
+      "role": "中毒流法师",
+      "difficulty": 1,
+      "tier": "B",
+      "tier_source": "社区示例",
+      "power": 79,
+      "schools": {
+        "poison": 1.0,
+        "vulnerable": 0.6,
+        "ultimate": 0.5
+      },
+      "weak_to": [
+        "freeze",
+        "dodge"
+      ],
+      "summary": "中毒流教学英雄，靠战前毒与毒大招打出可观总伤；走 40 层毒时不要点毒性伤害天赋。",
+      "portrait": "",
+      "stats": {
+        "hp": 1000,
+        "attack": 21,
+        "attack_speed": 2.1,
+        "energy_regen": 11,
+        "dodge": 16,
+        "crit": 14
+      },
+      "talent": "敌人受到的中毒伤害增加（英雄等级*6）点。",
+      "ultimate": "抛出一颗蕴含剧毒的法球，对敌人添加160层中毒。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_08",
+      "name": "极寒掌控者",
+      "aliases": [],
+      "role": "冰冻控制",
+      "difficulty": 2,
+      "tier": "B",
+      "tier_source": "面板估算",
+      "power": 76.0,
+      "schools": {
+        "freeze": 1.0,
+        "crit": 0.5,
+        "life": 0.4
+      },
+      "weak_to": [
+        "heal",
+        "shield"
+      ],
+      "summary": "冰冻控制。天赋：每累计对敌人施加50层冰冻，随机使敌人发射的飞行中的1个投射物冻住失；大招：召唤冰块从天而降砸向敌人，造成0.8秒眩晕及300点物理伤害。",
+      "portrait": "",
+      "stats": {
+        "hp": 1100,
+        "attack": 20,
+        "attack_speed": 2.0,
+        "energy_regen": 11,
+        "dodge": 18,
+        "crit": 20
+      },
+      "talent": "每累计对敌人施加50层冰冻，随机使敌人发射的飞行中的1个投射物冻住失效。",
+      "ultimate": "召唤冰块从天而降砸向敌人，造成0.8秒眩晕及300点物理伤害。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_09",
+      "name": "精灵牧师",
+      "aliases": [
+        "精灵牧",
+        "牧师"
+      ],
+      "role": "精灵召唤",
+      "difficulty": 2,
+      "tier": "C",
+      "tier_source": "面板估算",
+      "power": 73.2,
+      "schools": {
+        "spirit": 1.0,
+        "heal": 0.8,
+        "ultimate": 0.4
+      },
+      "weak_to": [
+        "freeze",
+        "vulnerable"
+      ],
+      "summary": "精灵召唤。天赋：精灵在场时自身的生命回复效果减少50%但每次回复时会对敌人造成（该次；大招：发射暗影箭对敌人造成210点魔法伤害，并使敌人的回复效果降低80%，",
+      "portrait": "",
+      "stats": {
+        "hp": 1000,
+        "attack": 18,
+        "attack_speed": 2.1,
+        "energy_regen": 10,
+        "dodge": 18,
+        "crit": 17
+      },
+      "talent": "精灵在场时自身的生命回复效果减少50%但每次回复时会对敌人造成（该次生命回复量*160%)点魔法伤害。",
+      "ultimate": "发射暗影箭对敌人造成210点魔法伤害，并使敌人的回复效果降低80%，持续3秒。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "forest_ranger",
+      "name": "森林游侠",
+      "aliases": [
+        "游侠",
+        "森林"
+      ],
+      "role": "远程持续输出",
+      "difficulty": 2,
+      "tier": "A",
+      "tier_source": "社区示例",
+      "power": 83,
+      "schools": {
+        "basic": 0.95,
+        "haste": 0.8,
+        "spirit": 0.55,
+        "crit": 0.45
+      },
+      "weak_to": [
+        "freeze",
+        "dodge"
+      ],
+      "summary": "远程普攻射手，靠攻速与攻击力滚雪球，副系精灵补足爆发；怕冰冻断节奏、怕闪避拖输出。",
+      "portrait": "data/templates/heroes/forest_ranger.png",
+      "stats": {
+        "hp": 1100,
+        "attack": 19,
+        "attack_speed": 2.0,
+        "energy_regen": 11,
+        "dodge": 18,
+        "crit": 16
+      },
+      "talent": "每隔6秒发射10支箭支伤害敌人，每支箭造成15点物理伤害，每次施放大招会使下次箭雨的到来提前3秒。",
+      "ultimate": "射出巨型光箭对敌人造成240点魔法伤害，同时闪避接下来的5次物理伤害。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_11",
+      "name": "致命荆棘",
+      "aliases": [],
+      "role": "生命战士",
+      "difficulty": 2,
+      "tier": "B",
+      "tier_source": "面板估算",
+      "power": 76.7,
+      "schools": {
+        "life": 1.0,
+        "vulnerable": 0.6,
+        "ultimate": 0.4
+      },
+      "weak_to": [
+        "poison",
+        "vulnerable"
+      ],
+      "summary": "生命战士。天赋：每损失1点玩家生命，提升20点最大生命；大招：喷射尖刺，对敌人造成（200+已损失玩家生命*5）点魔法伤害。",
+      "portrait": "",
+      "stats": {
+        "hp": 1200,
+        "attack": 20,
+        "attack_speed": 1.9,
+        "energy_regen": 13,
+        "dodge": 12,
+        "crit": 12
+      },
+      "talent": "每损失1点玩家生命，提升20点最大生命。",
+      "ultimate": "喷射尖刺，对敌人造成（200+已损失玩家生命*5）点魔法伤害。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_12",
+      "name": "地精炮手",
+      "aliases": [],
+      "role": "普攻输出",
+      "difficulty": 2,
+      "tier": "B",
+      "tier_source": "面板估算",
+      "power": 76.2,
+      "schools": {
+        "basic": 0.8,
+        "haste": 0.8,
+        "ultimate": 0.7
+      },
+      "weak_to": [
+        "freeze",
+        "dodge"
+      ],
+      "summary": "普攻输出。天赋：每当发射一个非普通攻击的投射物时，额外发射一个它的复制品，造成原投射；大招：发射5个随机的非普通攻击投射物，每个投射物最少造成30点伤害。",
+      "portrait": "",
+      "stats": {
+        "hp": 1000,
+        "attack": 21,
+        "attack_speed": 2.5,
+        "energy_regen": 12,
+        "dodge": 15,
+        "crit": 15
+      },
+      "talent": "每当发射一个非普通攻击的投射物时，额外发射一个它的复制品，造成原投射物35%的伤害。",
+      "ultimate": "发射5个随机的非普通攻击投射物，每个投射物最少造成30点伤害。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_13",
+      "name": "渣客鼠王",
+      "aliases": [],
+      "role": "中毒法系",
+      "difficulty": 2,
+      "tier": "C",
+      "tier_source": "面板估算",
+      "power": 73.4,
+      "schools": {
+        "poison": 0.9,
+        "vulnerable": 0.7,
+        "haste": 0.5
+      },
+      "weak_to": [
+        "crit"
+      ],
+      "summary": "中毒法系。天赋：造成非炸药伤害时，80%概率向下水道投入1枚对应伤害类型的炸药。累计；大招：向下水道投入5枚物理炸药、10枚魔法炸药。",
+      "portrait": "",
+      "stats": {
+        "hp": 1000,
+        "attack": 19,
+        "attack_speed": 2.1,
+        "energy_regen": 10,
+        "dodge": 15,
+        "crit": 16
+      },
+      "talent": "造成非炸药伤害时，80%概率向下水道投入1枚对应伤害类型的炸药。累计10枚后引爆，每枚炸药造成（20+自身等级*1）点伤害。",
+      "ultimate": "向下水道投入5枚物理炸药、10枚魔法炸药。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_14",
+      "name": "部落勇士",
+      "aliases": [],
+      "role": "护盾坦克",
+      "difficulty": 2,
+      "tier": "B",
+      "tier_source": "面板估算",
+      "power": 77.2,
+      "schools": {
+        "shield": 1.0,
+        "life": 0.8,
+        "basic": 0.4
+      },
+      "weak_to": [
+        "poison",
+        "vulnerable"
+      ],
+      "summary": "护盾坦克。天赋：每拥有1个不同的护盾流技能，增加自身35点最大生命；大招：立即获得(英雄最大生命*6%)层护盾，同时向敌人扔出斩斧，造成170",
+      "portrait": "",
+      "stats": {
+        "hp": 1300,
+        "attack": 19,
+        "attack_speed": 2.0,
+        "energy_regen": 10,
+        "dodge": 16,
+        "crit": 17
+      },
+      "talent": "每拥有1个不同的护盾流技能，增加自身35点最大生命。",
+      "ultimate": "立即获得(英雄最大生命*6%)层护盾，同时向敌人扔出斩斧，造成170点物理伤害。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_15",
+      "name": "浴血狂战",
+      "aliases": [],
+      "role": "暴击爆发",
+      "difficulty": 2,
+      "tier": "C",
+      "tier_source": "面板估算",
+      "power": 75.5,
+      "schools": {
+        "crit": 1.0,
+        "life": 0.7,
+        "basic": 0.5
+      },
+      "weak_to": [
+        "shield",
+        "dodge"
+      ],
+      "summary": "暴击爆发。天赋：暴击时偷取敌方英雄（自身最大生命值*1.5%）点最大生命值；大招：召唤利刃分割敌人，瞬间造成(200+双方最大生命值之差*10%）点物",
+      "portrait": "",
+      "stats": {
+        "hp": 1200,
+        "attack": 18,
+        "attack_speed": 2.1,
+        "energy_regen": 10,
+        "dodge": 13,
+        "crit": 19
+      },
+      "talent": "暴击时偷取敌方英雄（自身最大生命值*1.5%）点最大生命值。",
+      "ultimate": "召唤利刃分割敌人，瞬间造成(200+双方最大生命值之差*10%）点物理伤害。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "miser",
+      "name": "守财奴",
+      "aliases": [
+        "财奴",
+        "钱奴"
+      ],
+      "role": "经济运营型核心",
+      "difficulty": 3,
+      "tier": "S",
+      "tier_source": "社区示例",
+      "power": 93,
+      "schools": {
+        "ultimate": 0.8,
+        "life": 0.6,
+        "shield": 0.6,
+        "basic": 0.5
+      },
+      "weak_to": [
+        "poison",
+        "haste"
+      ],
+      "summary": "前 10 回合存钱吃利息，大招按金钱增伤且无上限，靠经济差滚出等级与技能优势；强但吃理解。",
+      "portrait": "",
+      "stats": {
+        "hp": 1100,
+        "attack": 19,
+        "attack_speed": 2.3,
+        "energy_regen": 10,
+        "dodge": 20,
+        "crit": 15
+      },
+      "talent": "基础利息上限增加50金币",
+      "ultimate": "扔出金币炸弹，对敌人造成（300+拥有金币数*25%）点物理伤害。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_17",
+      "name": "霸者龙神",
+      "aliases": [],
+      "role": "生命战士",
+      "difficulty": 2,
+      "tier": "B",
+      "tier_source": "面板估算",
+      "power": 76.3,
+      "schools": {
+        "life": 1.0,
+        "spirit": 0.7,
+        "shield": 0.5
+      },
+      "weak_to": [
+        "poison",
+        "vulnerable"
+      ],
+      "summary": "生命战士。天赋：每拥有1个不同的技能，增加15点最大生命值；大招：喷射龙焰对目标造成（200+双方等级之和*15）的魔法伤害。",
+      "portrait": "",
+      "stats": {
+        "hp": 1200,
+        "attack": 22,
+        "attack_speed": 1.8,
+        "energy_regen": 9,
+        "dodge": 12,
+        "crit": 16
+      },
+      "talent": "每拥有1个不同的技能，增加15点最大生命值。",
+      "ultimate": "喷射龙焰对目标造成（200+双方等级之和*15）的魔法伤害。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "magic_mirror",
+      "name": "魔镜",
+      "aliases": [
+        "镜子"
+      ],
+      "role": "减伤反击型战士",
+      "difficulty": 2,
+      "tier": "A",
+      "tier_source": "社区示例",
+      "power": 84,
+      "schools": {
+        "basic": 0.9,
+        "shield": 0.65,
+        "crit": 0.5,
+        "heal": 0.4
+      },
+      "weak_to": [
+        "poison",
+        "vulnerable"
+      ],
+      "summary": "2026-07 新英雄：受到伤害降低 10%，每次受击才进行一次普攻，大招连打 9 次普攻；适配普攻、护盾与暴击。",
+      "portrait": "data/templates/heroes/magic_mirror.png",
+      "stats": {
+        "hp": 1000,
+        "attack": 26,
+        "attack_speed": 0.0,
+        "energy_regen": 10,
+        "dodge": 0,
+        "crit": 16
+      },
+      "talent": "受到的所有伤害减少10%，只有每次受到伤害时才会进行一次普攻。",
+      "ultimate": "快速打出9次普攻",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "chaos_apostle",
+      "name": "混乱使徒",
+      "aliases": [
+        "混乱",
+        "使徒"
+      ],
+      "role": "异常状态法系",
+      "difficulty": 2,
+      "tier": "B",
+      "tier_source": "社区示例",
+      "power": 78,
+      "schools": {
+        "vulnerable": 0.9,
+        "poison": 0.7,
+        "spirit": 0.6
+      },
+      "weak_to": [
+        "heal",
+        "shield"
+      ],
+      "summary": "易伤、中毒、精灵三系叠异常，靠增伤乘区打爆发；需要先站住再叠层。",
+      "portrait": "",
+      "stats": {
+        "hp": 1000,
+        "attack": 20,
+        "attack_speed": 2.3,
+        "energy_regen": 10,
+        "dodge": 18,
+        "crit": 18
+      },
+      "talent": "敌方英雄血量低于33%时，立即施加（50+英雄等级*5）层易伤，每场战斗只会触发1次。",
+      "ultimate": "召唤出两个法球攻击敌人，分别造成150点物理伤害和150点魔法伤害。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_20",
+      "name": "恶魔之影",
+      "aliases": [],
+      "role": "闪避刺客",
+      "difficulty": 2,
+      "tier": "C",
+      "tier_source": "面板估算",
+      "power": 74.9,
+      "schools": {
+        "dodge": 1.0,
+        "crit": 0.9,
+        "basic": 0.4
+      },
+      "weak_to": [
+        "poison",
+        "vulnerable"
+      ],
+      "summary": "闪避刺客。天赋：战斗开始后每过1.5秒，同时提升1点闪避和暴击，最多提升8点；大招：召唤龙卷风团吹向敌人，对敌人造成自身（（闪避+暴击）*4)点魔法伤害",
+      "portrait": "",
+      "stats": {
+        "hp": 1000,
+        "attack": 20,
+        "attack_speed": 2.5,
+        "energy_regen": 9,
+        "dodge": 18,
+        "crit": 18
+      },
+      "talent": "战斗开始后每过1.5秒，同时提升1点闪避和暴击，最多提升8点。",
+      "ultimate": "召唤龙卷风团吹向敌人，对敌人造成自身（（闪避+暴击）*4)点魔法伤害。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "astral_mage",
+      "name": "星界法师",
+      "aliases": [
+        "星界",
+        "星界法"
+      ],
+      "role": "回能大招法核",
+      "difficulty": 2,
+      "tier": "S",
+      "tier_source": "社区示例",
+      "power": 92,
+      "schools": {
+        "ultimate": 1.0,
+        "heal": 0.7,
+        "haste": 0.6
+      },
+      "weak_to": [
+        "freeze",
+        "crit"
+      ],
+      "summary": "受到魔法伤害回复 2 点能量，基础回能也高，在魔法伤害满天飞的环境里回能登顶；大招流版本之子。",
+      "portrait": "",
+      "stats": {
+        "hp": 1000,
+        "attack": 22,
+        "attack_speed": 2.2,
+        "energy_regen": 12,
+        "dodge": 17,
+        "crit": 16
+      },
+      "talent": "每次受到魔法伤害，回复2点能量",
+      "ultimate": "召唤乌鸦打击敌人造成(260+易伤层数*1.5)点魔法伤害。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_22",
+      "name": "丛林先知",
+      "aliases": [],
+      "role": "精灵召唤",
+      "difficulty": 2,
+      "tier": "C",
+      "tier_source": "面板估算",
+      "power": 75.6,
+      "schools": {
+        "spirit": 1.0,
+        "life": 0.6,
+        "heal": 0.5
+      },
+      "weak_to": [
+        "freeze",
+        "vulnerable"
+      ],
+      "summary": "精灵召唤。天赋：精灵获得（英雄等级*1.5）点伤害减免；大招：召唤藤蔓缠绕敌人，每1秒造成150点魔法伤害共持续2秒，释放大招时每",
+      "portrait": "",
+      "stats": {
+        "hp": 1000,
+        "attack": 21,
+        "attack_speed": 2.3,
+        "energy_regen": 11,
+        "dodge": 16,
+        "crit": 17
+      },
+      "talent": "精灵获得（英雄等级*1.5）点伤害减免。",
+      "ultimate": "召唤藤蔓缠绕敌人，每1秒造成150点魔法伤害共持续2秒，释放大招时每个在场的精灵会使根须的存在时间增加1秒。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_23",
+      "name": "毒龙骑士",
+      "aliases": [],
+      "role": "中毒法系",
+      "difficulty": 2,
+      "tier": "B",
+      "tier_source": "面板估算",
+      "power": 76.7,
+      "schools": {
+        "poison": 0.9,
+        "haste": 0.7,
+        "basic": 0.6
+      },
+      "weak_to": [
+        "crit"
+      ],
+      "summary": "中毒法系。天赋：敌人的当前生命相比最大生命每减少10%就会提升自身6%攻击速度；大招：召唤毒风环绕敌人，立即施加70层中毒，且接下来的3秒内，普通攻击会额",
+      "portrait": "",
+      "stats": {
+        "hp": 1200,
+        "attack": 18,
+        "attack_speed": 2.5,
+        "energy_regen": 10,
+        "dodge": 16,
+        "crit": 19
+      },
+      "talent": "敌人的当前生命相比最大生命每减少10%就会提升自身6%攻击速度。",
+      "ultimate": "召唤毒风环绕敌人，立即施加70层中毒，且接下来的3秒内，普通攻击会额外施加10层中毒。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "flame_djinn",
+      "name": "烈焰巨灵",
+      "aliases": [
+        "巨灵",
+        "火人"
+      ],
+      "role": "大招暴击法系",
+      "difficulty": 2,
+      "tier": "B",
+      "tier_source": "社区示例",
+      "power": 78,
+      "schools": {
+        "ultimate": 1.0,
+        "crit": 0.8,
+        "rage": 0.5
+      },
+      "weak_to": [
+        "freeze",
+        "shield"
+      ],
+      "summary": "大招与暴击双修的法系爆发，能给星界法师回能；自身怕控制和护盾。",
+      "portrait": "",
+      "stats": {
+        "hp": 1200,
+        "attack": 19,
+        "attack_speed": 1.8,
+        "energy_regen": 11,
+        "dodge": 14,
+        "crit": 20
+      },
+      "talent": "大招有（35+自身暴击*0.8)%的概率再次释放，最多可以再次释放4次。（再次释放不计算大招次数）",
+      "ultimate": "向敌人抛出一枚火球，造成200点魔法伤害并眩晕0.3秒。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_25",
+      "name": "鱼人咒术士",
+      "aliases": [],
+      "role": "中毒法系",
+      "difficulty": 2,
+      "tier": "C",
+      "tier_source": "面板估算",
+      "power": 74.2,
+      "schools": {
+        "poison": 1.0,
+        "freeze": 0.9,
+        "ultimate": 0.4
+      },
+      "weak_to": [
+        "crit"
+      ],
+      "summary": "中毒法系。天赋：每次对敌人施加中毒时，33%概率同时对敌人施加15层冰冻；大招：向敌人投掷4瓶特制药剂，每瓶寸敌人施加30层中毒与冰冻。敌方每损失1",
+      "portrait": "",
+      "stats": {
+        "hp": 1100,
+        "attack": 17,
+        "attack_speed": 2.2,
+        "energy_regen": 11,
+        "dodge": 18,
+        "crit": 13
+      },
+      "talent": "每次对敌人施加中毒时，33%概率同时对敌人施加15层冰冻。",
+      "ultimate": "向敌人投掷4瓶特制药剂，每瓶寸敌人施加30层中毒与冰冻。敌方每损失10%生命值，投掷数量曾加1瓶。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_26",
+      "name": "烈焰法师",
+      "aliases": [],
+      "role": "怒气战士",
+      "difficulty": 2,
+      "tier": "C",
+      "tier_source": "面板估算",
+      "power": 74.6,
+      "schools": {
+        "rage": 0.9,
+        "ultimate": 0.8,
+        "crit": 0.4
+      },
+      "weak_to": [
+        "freeze",
+        "shield"
+      ],
+      "summary": "怒气战士。天赋：每获得10点怒气，回复1点能量；大招：对敌人造成（310+当前怒气值*33%）的魔法伤害。",
+      "portrait": "",
+      "stats": {
+        "hp": 1000,
+        "attack": 19,
+        "attack_speed": 2.1,
+        "energy_regen": 13,
+        "dodge": 13,
+        "crit": 17
+      },
+      "talent": "每获得10点怒气，回复1点能量",
+      "ultimate": "对敌人造成（310+当前怒气值*33%）的魔法伤害。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_27",
+      "name": "沉默守卫",
+      "aliases": [],
+      "role": "护盾坦克",
+      "difficulty": 2,
+      "tier": "B",
+      "tier_source": "面板估算",
+      "power": 76.5,
+      "schools": {
+        "shield": 1.0,
+        "rage": 0.8,
+        "life": 0.5
+      },
+      "weak_to": [
+        "poison",
+        "vulnerable"
+      ],
+      "summary": "护盾坦克。天赋：狂怒状态下每层护盾可以额外多抵挡0.8点伤害；大招：凝聚能量从天而降，对敌方英雄造成（230+两次大招释放期间累计护盾实",
+      "portrait": "",
+      "stats": {
+        "hp": 1200,
+        "attack": 20,
+        "attack_speed": 1.9,
+        "energy_regen": 11,
+        "dodge": 14,
+        "crit": 17
+      },
+      "talent": "狂怒状态下每层护盾可以额外多抵挡0.8点伤害。",
+      "ultimate": "凝聚能量从天而降，对敌方英雄造成（230+两次大招释放期间累计护盾实际抵挡伤害*20%）点魔法伤害",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_28",
+      "name": "林地女妖",
+      "aliases": [],
+      "role": "精灵召唤",
+      "difficulty": 2,
+      "tier": "C",
+      "tier_source": "面板估算",
+      "power": 73.1,
+      "schools": {
+        "spirit": 1.0,
+        "heal": 0.7,
+        "life": 0.5
+      },
+      "weak_to": [
+        "freeze",
+        "vulnerable"
+      ],
+      "summary": "精灵召唤。天赋：战斗开始后每过4秒都会有一只精灵来支援你，精灵的生命值为（40+自身；大招：呼唤荒野的力量对敌人造成（200+场上精灵数量*30）点魔法伤害，并",
+      "portrait": "",
+      "stats": {
+        "hp": 1000,
+        "attack": 17,
+        "attack_speed": 2.1,
+        "energy_regen": 12,
+        "dodge": 15,
+        "crit": 15
+      },
+      "talent": "战斗开始后每过4秒都会有一只精灵来支援你，精灵的生命值为（40+自身等级*10）。",
+      "ultimate": "呼唤荒野的力量对敌人造成（200+场上精灵数量*30）点魔法伤害，并为场上生命值比例最低的精灵回复100点生命值。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_29",
+      "name": "地精投石车",
+      "aliases": [],
+      "role": "护盾坦克",
+      "difficulty": 2,
+      "tier": "B",
+      "tier_source": "面板估算",
+      "power": 79.2,
+      "schools": {
+        "shield": 1.0,
+        "crit": 0.7,
+        "basic": 0.5
+      },
+      "weak_to": [
+        "poison",
+        "vulnerable"
+      ],
+      "summary": "护盾坦克。天赋：每当获得护盾时，有（10+自身暴击*1）%的概率额外获得30层护盾；大招：进入持续3秒的充能状态，发射两块巨大的石头造成120点物理伤害，充能",
+      "portrait": "",
+      "stats": {
+        "hp": 1300,
+        "attack": 25,
+        "attack_speed": 1.8,
+        "energy_regen": 9,
+        "dodge": 12,
+        "crit": 16
+      },
+      "talent": "每当获得护盾时，有（10+自身暴击*1）%的概率额外获得30层护盾。",
+      "ultimate": "进入持续3秒的充能状态，发射两块巨大的石头造成120点物理伤害，充能状态中每获得60层护盾会额外发射一块石头。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_30",
+      "name": "苦痛狱卒",
+      "aliases": [],
+      "role": "怒气战士",
+      "difficulty": 2,
+      "tier": "C",
+      "tier_source": "面板估算",
+      "power": 75.4,
+      "schools": {
+        "rage": 0.9,
+        "heal": 0.8,
+        "life": 0.5
+      },
+      "weak_to": [
+        "freeze",
+        "shield"
+      ],
+      "summary": "怒气战士。天赋：狂怒期间获得等同于伤害增幅的治疗增幅；大招：发射一个魔法铁球，对敌方造成160点魔法伤害，并连接自身与敌人3秒，",
+      "portrait": "",
+      "stats": {
+        "hp": 1200,
+        "attack": 18,
+        "attack_speed": 2.0,
+        "energy_regen": 10,
+        "dodge": 15,
+        "crit": 18
+      },
+      "talent": "狂怒期间获得等同于伤害增幅的治疗增幅。",
+      "ultimate": "发射一个魔法铁球，对敌方造成160点魔法伤害，并连接自身与敌人3秒，期间自身受到伤害的20%由对方承受。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_31",
+      "name": "鬼牌希科",
+      "aliases": [],
+      "role": "大招法核",
+      "difficulty": 3,
+      "tier": "B",
+      "tier_source": "面板估算",
+      "power": 76.9,
+      "schools": {
+        "ultimate": 0.7,
+        "spirit": 0.6,
+        "basic": 0.5
+      },
+      "weak_to": [
+        "freeze",
+        "crit"
+      ],
+      "summary": "大招法核。天赋：主动使用：选择一名场上英雄复制其天赋。（天赋大招不能复制同名英雄）；大招：主动使用：选择一名场上英雄复制其大招。（天赋大招不能复制同名英雄）",
+      "portrait": "",
+      "stats": {
+        "hp": 1200,
+        "attack": 21,
+        "attack_speed": 2.0,
+        "energy_regen": 10,
+        "dodge": 16,
+        "crit": 16
+      },
+      "talent": "主动使用：选择一名场上英雄复制其天赋。（天赋大招不能复制同名英雄）",
+      "ultimate": "主动使用：选择一名场上英雄复制其大招。（天赋大招不能复制同名英雄）",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_32",
+      "name": "皇家骑士",
+      "aliases": [],
+      "role": "护盾坦克",
+      "difficulty": 2,
+      "tier": "C",
+      "tier_source": "面板估算",
+      "power": 74.6,
+      "schools": {
+        "shield": 1.0,
+        "heal": 0.7,
+        "life": 0.5
+      },
+      "weak_to": [
+        "poison",
+        "vulnerable"
+      ],
+      "summary": "护盾坦克。天赋：护盾自然衰退降低15%；大招：召唤护盾法阵，每0.5秒获得65层护盾，持续2秒。",
+      "portrait": "",
+      "stats": {
+        "hp": 1100,
+        "attack": 18,
+        "attack_speed": 2.1,
+        "energy_regen": 10,
+        "dodge": 18,
+        "crit": 18
+      },
+      "talent": "护盾自然衰退降低15%",
+      "ultimate": "召唤护盾法阵，每0.5秒获得65层护盾，持续2秒。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "plague_doctor",
+      "name": "瘟疫术士",
+      "aliases": [
+        "瘟疫",
+        "术士"
+      ],
+      "role": "中毒/易伤法系",
+      "difficulty": 2,
+      "tier": "A",
+      "tier_source": "社区示例",
+      "power": 83,
+      "schools": {
+        "poison": 1.0,
+        "vulnerable": 0.7,
+        "heal": 0.7
+      },
+      "weak_to": [
+        "crit",
+        "dodge"
+      ],
+      "summary": "中毒+易伤高爆发，同时靠中毒回血保持续航；后期处理肉盾很强，权杖几乎是必拿宝物。",
+      "portrait": "",
+      "stats": {
+        "hp": 1000,
+        "attack": 19,
+        "attack_speed": 2.0,
+        "energy_regen": 10,
+        "dodge": 14,
+        "crit": 15
+      },
+      "talent": "每当敌人受到中毒伤害时，自身回复该伤害15%的生命，至少回复1点。",
+      "ultimate": "立即回复150点生命，同时抛出一枚毒气弹，对敌人施加100层中毒。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_34",
+      "name": "白虎射手",
+      "aliases": [],
+      "role": "普攻输出",
+      "difficulty": 2,
+      "tier": "C",
+      "tier_source": "面板估算",
+      "power": 74.7,
+      "schools": {
+        "basic": 1.0,
+        "haste": 0.8,
+        "ultimate": 0.5
+      },
+      "weak_to": [
+        "freeze",
+        "dodge"
+      ],
+      "summary": "普攻输出。天赋：每次释放大招后，提升30%攻击速度，持续3秒；大招：召唤闪电瞬间打击敌人，造成200点魔法伤害，同时本场战斗增加自身6点",
+      "portrait": "",
+      "stats": {
+        "hp": 1000,
+        "attack": 17,
+        "attack_speed": 3.0,
+        "energy_regen": 10,
+        "dodge": 17,
+        "crit": 18
+      },
+      "talent": "每次释放大招后，提升30%攻击速度，持续3秒。",
+      "ultimate": "召唤闪电瞬间打击敌人，造成200点魔法伤害，同时本场战斗增加自身6点攻击力，可叠加。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_35",
+      "name": "霜影暴君",
+      "aliases": [],
+      "role": "冰冻控制",
+      "difficulty": 2,
+      "tier": "B",
+      "tier_source": "面板估算",
+      "power": 76.3,
+      "schools": {
+        "freeze": 0.9,
+        "crit": 0.9,
+        "basic": 0.5
+      },
+      "weak_to": [
+        "heal",
+        "shield"
+      ],
+      "summary": "冰冻控制。天赋：放人身上每有2层冰冻会使你的暴击伤害增加1%；大招：将敌人笼罩在冰霜之中，每.5秒施加25层冰冻，在此期间你造成的物理伤",
+      "portrait": "",
+      "stats": {
+        "hp": 1100,
+        "attack": 20,
+        "attack_speed": 2.5,
+        "energy_regen": 9,
+        "dodge": 15,
+        "crit": 22
+      },
+      "talent": "放人身上每有2层冰冻会使你的暴击伤害增加1%",
+      "ultimate": "将敌人笼罩在冰霜之中，每.5秒施加25层冰冻，在此期间你造成的物理伤害必定暴击，持续2秒。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_36",
+      "name": "冰霜法师",
+      "aliases": [],
+      "role": "冰冻控制",
+      "difficulty": 2,
+      "tier": "C",
+      "tier_source": "面板估算",
+      "power": 74.9,
+      "schools": {
+        "freeze": 1.0,
+        "ultimate": 0.7,
+        "haste": 0.5
+      },
+      "weak_to": [
+        "heal",
+        "shield"
+      ],
+      "summary": "冰冻控制。天赋：每当对敌人施加冰冻时，80%概率回复1点能量；大招：释放5枚寒冰冲击敌人，每枚寒冰造成60点魔法伤害，敌人身上每有20层",
+      "portrait": "",
+      "stats": {
+        "hp": 1000,
+        "attack": 19,
+        "attack_speed": 2.1,
+        "energy_regen": 13,
+        "dodge": 19,
+        "crit": 15
+      },
+      "talent": "每当对敌人施加冰冻时，80%概率回复1点能量。",
+      "ultimate": "释放5枚寒冰冲击敌人，每枚寒冰造成60点魔法伤害，敌人身上每有20层冰冻则额外召唤1枚寒冰。花费600解锁300",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_37",
+      "name": "炼金术士",
+      "aliases": [],
+      "role": "易伤增幅",
+      "difficulty": 2,
+      "tier": "C",
+      "tier_source": "面板估算",
+      "power": 75.7,
+      "schools": {
+        "vulnerable": 1.0,
+        "heal": 0.8,
+        "life": 0.5
+      },
+      "weak_to": [
+        "heal",
+        "shield"
+      ],
+      "summary": "易伤增幅。天赋：英雄每累计承受最大生命值10%的伤害就会对敌人施加10层易伤；大招：每0.8秒回复50点生命值，持续4秒。期间施加的所有易伤额外增加5层",
+      "portrait": "",
+      "stats": {
+        "hp": 1100,
+        "attack": 22,
+        "attack_speed": 1.9,
+        "energy_regen": 9,
+        "dodge": 18,
+        "crit": 16
+      },
+      "talent": "英雄每累计承受最大生命值10%的伤害就会对敌人施加10层易伤。",
+      "ultimate": "每0.8秒回复50点生命值，持续4秒。期间施加的所有易伤额外增加5层。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "goblin_artisan",
+      "name": "地精工匠",
+      "aliases": [
+        "地精",
+        "工匠"
+      ],
+      "role": "护盾/易伤法系",
+      "difficulty": 2,
+      "tier": "A",
+      "tier_source": "社区示例",
+      "power": 85,
+      "schools": {
+        "shield": 1.0,
+        "vulnerable": 0.8,
+        "dodge": 0.5,
+        "freeze": 0.45,
+        "heal": 0.45
+      },
+      "weak_to": [
+        "poison"
+      ],
+      "summary": "靠打雷与盾大打爆发，被动附加的魔法伤害特别适合冰冻射线、放疗这类高频低伤技能。",
+      "portrait": "",
+      "stats": {
+        "hp": 1100,
+        "attack": 20,
+        "attack_speed": 1.9,
+        "energy_regen": 11,
+        "dodge": 17,
+        "crit": 16
+      },
+      "talent": "每拥有1个不同的技能使自身造成的魔法伤害增加2点。",
+      "ultimate": "发射10枚火箭轰击敌人，每枚火箭造成（25+英雄等级*1.5）点物理伤害。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "spellbreaker",
+      "name": "破魔者",
+      "aliases": [
+        "破魔"
+      ],
+      "role": "闪避/普攻刺客",
+      "difficulty": 2,
+      "tier": "B",
+      "tier_source": "社区示例",
+      "power": 77,
+      "schools": {
+        "dodge": 1.0,
+        "basic": 0.8,
+        "crit": 0.6
+      },
+      "weak_to": [
+        "poison",
+        "freeze"
+      ],
+      "summary": "闪避、普攻、暴击三系灵活切换，靠高闪避与暴击找输出窗口；体系不齐时容易刮痧。",
+      "portrait": "",
+      "stats": {
+        "hp": 1000,
+        "attack": 18,
+        "attack_speed": 2.4,
+        "energy_regen": 9,
+        "dodge": 24,
+        "crit": 15
+      },
+      "talent": "每次普通攻击时，100%概率减少敌人1点能量。",
+      "ultimate": "凝聚虚空的能量轰击敌人，瞬间对敌人造成（300+[自身闪避-敌人闪避]*5）的魔法伤害。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_40",
+      "name": "树精守卫",
+      "aliases": [],
+      "role": "精灵召唤",
+      "difficulty": 2,
+      "tier": "B",
+      "tier_source": "面板估算",
+      "power": 77.4,
+      "schools": {
+        "spirit": 1.0,
+        "shield": 0.9,
+        "life": 0.5
+      },
+      "weak_to": [
+        "freeze",
+        "vulnerable"
+      ],
+      "summary": "精灵召唤。天赋：自身护盾每抵挡60点伤害精灵就会发射能量弹对敌人造成25点魔法伤害；大招：召唤出一个生命值为50点的精灵并获得220层护盾，同时使自己的精灵伤",
+      "portrait": "",
+      "stats": {
+        "hp": 1200,
+        "attack": 23,
+        "attack_speed": 1.9,
+        "energy_regen": 9,
+        "dodge": 14,
+        "crit": 18
+      },
+      "talent": "自身护盾每抵挡60点伤害精灵就会发射能量弹对敌人造成25点魔法伤害。",
+      "ultimate": "召唤出一个生命值为50点的精灵并获得220层护盾，同时使自己的精灵伤害分担率降为15%，持续2秒。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_41",
+      "name": "月隐猎手",
+      "aliases": [],
+      "role": "普攻输出",
+      "difficulty": 2,
+      "tier": "C",
+      "tier_source": "面板估算",
+      "power": 75.5,
+      "schools": {
+        "basic": 0.9,
+        "heal": 0.8,
+        "haste": 0.5
+      },
+      "weak_to": [
+        "freeze",
+        "dodge"
+      ],
+      "summary": "普攻输出。天赋：普通攻击命中敌人后会额外造成（敌人当前生命值*1.2%）的魔法伤害，；大招：进入狂暴姿态，偷取敌人20%的攻击速度，并使自身的生命回复效果+10",
+      "portrait": "",
+      "stats": {
+        "hp": 1100,
+        "attack": 21,
+        "attack_speed": 2.2,
+        "energy_regen": 9,
+        "dodge": 12,
+        "crit": 17
+      },
+      "talent": "普通攻击命中敌人后会额外造成（敌人当前生命值*1.2%）的魔法伤害，并回复等量的生命值。",
+      "ultimate": "进入狂暴姿态，偷取敌人20%的攻击速度，并使自身的生命回复效果+10，持续3S。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_42",
+      "name": "骸骨鸦医",
+      "aliases": [],
+      "role": "易伤增幅",
+      "difficulty": 2,
+      "tier": "C",
+      "tier_source": "面板估算",
+      "power": 72.4,
+      "schools": {
+        "vulnerable": 0.9,
+        "shield": 0.8,
+        "heal": 0.5
+      },
+      "weak_to": [
+        "heal",
+        "shield"
+      ],
+      "summary": "易伤增幅。天赋：每当施加的初始易伤层数大于16层时，额外施加（3+英雄等级）层易伤；大招：获得80层护盾并进入反击状态，每当护盾被消耗时会给敌人施加等值消耗层",
+      "portrait": "",
+      "stats": {
+        "hp": 1000,
+        "attack": 18,
+        "attack_speed": 1.9,
+        "energy_regen": 10,
+        "dodge": 14,
+        "crit": 17
+      },
+      "talent": "每当施加的初始易伤层数大于16层时，额外施加（3+英雄等级）层易伤。",
+      "ultimate": "获得80层护盾并进入反击状态，每当护盾被消耗时会给敌人施加等值消耗层数但不超过30层的易伤，持续3秒。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_43",
+      "name": "赤刀修罗",
+      "aliases": [],
+      "role": "怒气战士",
+      "difficulty": 2,
+      "tier": "B",
+      "tier_source": "面板估算",
+      "power": 78.8,
+      "schools": {
+        "rage": 1.0,
+        "basic": 0.9,
+        "haste": 0.5
+      },
+      "weak_to": [
+        "freeze",
+        "shield"
+      ],
+      "summary": "怒气战士。天赋：狂怒状态下获得等同于伤害增幅的攻速增幅；大招：为武器附魔，接下来的7次普攻每次命中时额外造成40点魔法伤害并增加2",
+      "portrait": "",
+      "stats": {
+        "hp": 1200,
+        "attack": 23,
+        "attack_speed": 2.6,
+        "energy_regen": 9,
+        "dodge": 15,
+        "crit": 15
+      },
+      "talent": "狂怒状态下获得等同于伤害增幅的攻速增幅。",
+      "ultimate": "为武器附魔，接下来的7次普攻每次命中时额外造成40点魔法伤害并增加20点怒气。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_44",
+      "name": "缝合巨怪",
+      "aliases": [],
+      "role": "精灵召唤",
+      "difficulty": 2,
+      "tier": "B",
+      "tier_source": "面板估算",
+      "power": 78.0,
+      "schools": {
+        "spirit": 1.0,
+        "life": 0.8,
+        "shield": 0.4
+      },
+      "weak_to": [
+        "freeze",
+        "vulnerable"
+      ],
+      "summary": "精灵召唤。天赋：在精灵阵亡的一段时间后会将自身当前生命的20%重塑为新的精灵，英雄生；大招：发出冲击波对敌人造成（150+本场战斗已召唤精灵数*30）点魔法伤害",
+      "portrait": "",
+      "stats": {
+        "hp": 1200,
+        "attack": 25,
+        "attack_speed": 1.6,
+        "energy_regen": 10,
+        "dodge": 10,
+        "crit": 18
+      },
+      "talent": "在精灵阵亡的一段时间后会将自身当前生命的20%重塑为新的精灵，英雄生命值小于200点时不可再重塑",
+      "ultimate": "发出冲击波对敌人造成（150+本场战斗已召唤精灵数*30）点魔法伤害。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_45",
+      "name": "长生梨妖",
+      "aliases": [],
+      "role": "生命战士",
+      "difficulty": 3,
+      "tier": "B",
+      "tier_source": "面板估算",
+      "power": 76.7,
+      "schools": {
+        "life": 0.8,
+        "ultimate": 0.8,
+        "heal": 0.5
+      },
+      "weak_to": [
+        "poison",
+        "vulnerable"
+      ],
+      "summary": "生命战士。天赋：战斗结束后，获得战斗持续时间*2的金币（向上取整）；大招：发射一个梨形能量球，对敌人造成（100+战斗持续时间*20）的魔法伤",
+      "portrait": "",
+      "stats": {
+        "hp": 1200,
+        "attack": 19,
+        "attack_speed": 2.2,
+        "energy_regen": 11,
+        "dodge": 18,
+        "crit": 14
+      },
+      "talent": "战斗结束后，获得战斗持续时间*2的金币（向上取整）。",
+      "ultimate": "发射一个梨形能量球，对敌人造成（100+战斗持续时间*20）的魔法伤害。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_46",
+      "name": "企鹅船长",
+      "aliases": [],
+      "role": "回复辅助",
+      "difficulty": 2,
+      "tier": "C",
+      "tier_source": "面板估算",
+      "power": 74.3,
+      "schools": {
+        "heal": 1.0,
+        "freeze": 0.8,
+        "life": 0.5
+      },
+      "weak_to": [
+        "vulnerable",
+        "freeze"
+      ],
+      "summary": "回复辅助。天赋：每1秒，回复（8+敌人冰冻层数*25%）点生命；大招：向敌人发出一颗法球，造成（300+法球移动期间回复生命值总量*80%",
+      "portrait": "",
+      "stats": {
+        "hp": 1000,
+        "attack": 21,
+        "attack_speed": 1.8,
+        "energy_regen": 10,
+        "dodge": 18,
+        "crit": 18
+      },
+      "talent": "每1秒，回复（8+敌人冰冻层数*25%）点生命。",
+      "ultimate": "向敌人发出一颗法球，造成（300+法球移动期间回复生命值总量*80%）点魔法伤害。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_47",
+      "name": "觅血蛛王",
+      "aliases": [],
+      "role": "中毒法系",
+      "difficulty": 2,
+      "tier": "C",
+      "tier_source": "面板估算",
+      "power": 72.5,
+      "schools": {
+        "poison": 1.0,
+        "crit": 0.7,
+        "vulnerable": 0.4
+      },
+      "weak_to": [
+        "crit"
+      ],
+      "summary": "中毒法系。天赋：自己的中毒伤害也能产生暴击，概率为固定20%；大招：站立于毒泽之上每0.5秒对敌人施加20层中毒，并使中毒结算频率加快5",
+      "portrait": "",
+      "stats": {
+        "hp": 1000,
+        "attack": 18,
+        "attack_speed": 1.9,
+        "energy_regen": 9,
+        "dodge": 15,
+        "crit": 21
+      },
+      "talent": "自己的中毒伤害也能产生暴击，概率为固定20%",
+      "ultimate": "站立于毒泽之上每0.5秒对敌人施加20层中毒，并使中毒结算频率加快50%，持续2.5秒。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_48",
+      "name": "冰雪魔灵",
+      "aliases": [],
+      "role": "冰冻控制",
+      "difficulty": 2,
+      "tier": "B",
+      "tier_source": "面板估算",
+      "power": 77.2,
+      "schools": {
+        "freeze": 1.0,
+        "basic": 0.8,
+        "haste": 0.6
+      },
+      "weak_to": [
+        "heal",
+        "shield"
+      ],
+      "summary": "冰冻控制。天赋：每次普通攻击命中敌人时会额外施加（自身普攻次数-敌人普攻次数）层冰冻；大招：为自己接下来的8次普通攻击提升100%攻击速度。",
+      "portrait": "",
+      "stats": {
+        "hp": 1100,
+        "attack": 22,
+        "attack_speed": 2.6,
+        "energy_regen": 9,
+        "dodge": 17,
+        "crit": 15
+      },
+      "talent": "每次普通攻击命中敌人时会额外施加（自身普攻次数-敌人普攻次数）层冰冻。",
+      "ultimate": "为自己接下来的8次普通攻击提升100%攻击速度。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_49",
+      "name": "辣椒射手",
+      "aliases": [],
+      "role": "怒气战士",
+      "difficulty": 2,
+      "tier": "C",
+      "tier_source": "面板估算",
+      "power": 74.6,
+      "schools": {
+        "rage": 0.9,
+        "vulnerable": 0.7,
+        "basic": 0.5
+      },
+      "weak_to": [
+        "freeze",
+        "shield"
+      ],
+      "summary": "怒气战士。天赋：每获得100点怒气会发射一枚100点魔法伤害的子弹。单枚子弹对敌方英；大招：发射一枚子弹并对敌人施加持续4秒的诅咒，每1秒施加30层易伤。",
+      "portrait": "",
+      "stats": {
+        "hp": 1100,
+        "attack": 20,
+        "attack_speed": 1.8,
+        "energy_regen": 10,
+        "dodge": 18,
+        "crit": 14
+      },
+      "talent": "每获得100点怒气会发射一枚100点魔法伤害的子弹。单枚子弹对敌方英雄伤害超过120点时会再发射一枚子弹。",
+      "ultimate": "发射一枚子弹并对敌人施加持续4秒的诅咒，每1秒施加30层易伤。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_50",
+      "name": "恶魔公爵",
+      "aliases": [],
+      "role": "生命战士",
+      "difficulty": 2,
+      "tier": "C",
+      "tier_source": "面板估算",
+      "power": 74.1,
+      "schools": {
+        "life": 0.9,
+        "heal": 0.8,
+        "shield": 0.4
+      },
+      "weak_to": [
+        "poison",
+        "vulnerable"
+      ],
+      "summary": "生命战士。天赋：战斗中，回复生命值的25%会转化为自身最大生命值；大招：召唤烈焰投向敌人，对敌人造成(200+双方最大生命值之和*4%）点魔",
+      "portrait": "",
+      "stats": {
+        "hp": 1100,
+        "attack": 19,
+        "attack_speed": 2.0,
+        "energy_regen": 9,
+        "dodge": 16,
+        "crit": 16
+      },
+      "talent": "战斗中，回复生命值的25%会转化为自身最大生命值。",
+      "ultimate": "召唤烈焰投向敌人，对敌人造成(200+双方最大生命值之和*4%）点魔法伤害。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "ghost_mother",
+      "name": "恶灵主母",
+      "aliases": [
+        "祖母",
+        "主母",
+        "恶灵祖母"
+      ],
+      "role": "大招/生命法系",
+      "difficulty": 2,
+      "tier": "S",
+      "tier_source": "社区示例",
+      "power": 91,
+      "schools": {
+        "ultimate": 1.0,
+        "life": 0.7,
+        "heal": 0.6
+      },
+      "weak_to": [
+        "freeze",
+        "vulnerable"
+      ],
+      "summary": "必须掌握基础玩法的高上限英雄，生命流与回复流在她面前很难还手；大招与生命双修。",
+      "portrait": "",
+      "stats": {
+        "hp": 1000,
+        "attack": 23,
+        "attack_speed": 1.7,
+        "energy_regen": 11,
+        "dodge": 18,
+        "crit": 14
+      },
+      "talent": "每0.2秒额外回复（2*当前已损失生命百分比）点能量。",
+      "ultimate": "派出恶灵飞向敌人造成（150+敌人最大生命值*10%）点魔法伤害，并偷取等同敌人受到伤害数值80%的最大生命值。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_52",
+      "name": "矮人老兵",
+      "aliases": [],
+      "role": "暴击爆发",
+      "difficulty": 2,
+      "tier": "C",
+      "tier_source": "面板估算",
+      "power": 73.0,
+      "schools": {
+        "crit": 1.0,
+        "basic": 0.8,
+        "haste": 0.6
+      },
+      "weak_to": [
+        "shield",
+        "dodge"
+      ],
+      "summary": "暴击爆发。天赋：每次暴击对敌人造成伤害后附加0.2秒眩晕；大招：发射持续爆破弹，每0.2秒对敌人造成25点物理伤害，持续2秒。",
+      "portrait": "",
+      "stats": {
+        "hp": 1000,
+        "attack": 17,
+        "attack_speed": 2.4,
+        "energy_regen": 9,
+        "dodge": 13,
+        "crit": 22
+      },
+      "talent": "每次暴击对敌人造成伤害后附加0.2秒眩晕。",
+      "ultimate": "发射持续爆破弹，每0.2秒对敌人造成25点物理伤害，持续2秒。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "bounty_hunter",
+      "name": "赏金猎人",
+      "aliases": [
+        "赏金"
+      ],
+      "role": "经济型万金油",
+      "difficulty": 2,
+      "tier": "B",
+      "tier_source": "社区示例",
+      "power": 75,
+      "schools": {
+        "basic": 0.6,
+        "spirit": 0.6,
+        "life": 0.5,
+        "ultimate": 0.5
+      },
+      "weak_to": [
+        "freeze",
+        "dodge"
+      ],
+      "summary": "什么流派都能玩，适合需要经济和灵活转型的板子；不是刚需精致技能时的稳妥选择。",
+      "portrait": "",
+      "stats": {
+        "hp": 1000,
+        "attack": 21,
+        "attack_speed": 2.5,
+        "energy_regen": 12,
+        "dodge": 15,
+        "crit": 15
+      },
+      "talent": "每回合获得3个普通技能时，获得40金币。",
+      "ultimate": "向敌人发射5枚银弹，每发造成45点神圣伤害，敌人每拥有100金币则额外发射1枚子弹。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_54",
+      "name": "苍穹飓风",
+      "aliases": [],
+      "role": "急速频率",
+      "difficulty": 2,
+      "tier": "B",
+      "tier_source": "面板估算",
+      "power": 77.5,
+      "schools": {
+        "haste": 1.0,
+        "ultimate": 0.7,
+        "basic": 0.5
+      },
+      "weak_to": [
+        "freeze",
+        "shield"
+      ],
+      "summary": "急速频率。天赋：造成伤害时33%几率获得30层急速；大招：召唤风暴围绕敌人，每0.5秒对敌方造成40点魔法伤害，持续3秒。",
+      "portrait": "",
+      "stats": {
+        "hp": 1100,
+        "attack": 21,
+        "attack_speed": 2.5,
+        "energy_regen": 12,
+        "dodge": 15,
+        "crit": 15
+      },
+      "talent": "造成伤害时33%几率获得30层急速。",
+      "ultimate": "召唤风暴围绕敌人，每0.5秒对敌方造成40点魔法伤害，持续3秒。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_55",
+      "name": "先锋士兵",
+      "aliases": [],
+      "role": "护盾坦克",
+      "difficulty": 2,
+      "tier": "C",
+      "tier_source": "面板估算",
+      "power": 75.4,
+      "schools": {
+        "shield": 1.0,
+        "crit": 0.8,
+        "basic": 0.5
+      },
+      "weak_to": [
+        "poison",
+        "vulnerable"
+      ],
+      "summary": "护盾坦克。天赋：当你的护盾格挡伤害时，有(20+自身暴击*0.6）%的概率对敌人造成；大招：向敌人投掷一个回旋盾牌，造成80点物理伤害，并在返回时为自已提供80",
+      "portrait": "",
+      "stats": {
+        "hp": 1200,
+        "attack": 18,
+        "attack_speed": 2.0,
+        "energy_regen": 10,
+        "dodge": 12,
+        "crit": 21
+      },
+      "talent": "当你的护盾格挡伤害时，有(20+自身暴击*0.6）%的概率对敌人造成（1+本次格挡伤害*20%）的魔法伤害。",
+      "ultimate": "向敌人投掷一个回旋盾牌，造成80点物理伤害，并在返回时为自已提供80层护盾。若此次伤害产生暴击，则再次投掷盾牌。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_56",
+      "name": "罪恶克星",
+      "aliases": [],
+      "role": "暴击爆发",
+      "difficulty": 3,
+      "tier": "C",
+      "tier_source": "面板估算",
+      "power": 74.9,
+      "schools": {
+        "crit": 0.7,
+        "ultimate": 0.6,
+        "basic": 0.5
+      },
+      "weak_to": [
+        "shield",
+        "dodge"
+      ],
+      "summary": "暴击爆发。天赋：每获得一张克制技能时，奖励25金币；大招：从天而降4把光剑，每把造成70点魔法伤害，每有一个满级的克制技能增加",
+      "portrait": "",
+      "stats": {
+        "hp": 1100,
+        "attack": 19,
+        "attack_speed": 2.0,
+        "energy_regen": 12,
+        "dodge": 13,
+        "crit": 13
+      },
+      "talent": "每获得一张克制技能时，奖励25金币。",
+      "ultimate": "从天而降4把光剑，每把造成70点魔法伤害，每有一个满级的克制技能增加1把光剑。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_57",
+      "name": "星涡语者",
+      "aliases": [],
+      "role": "大招法核",
+      "difficulty": 2,
+      "tier": "C",
+      "tier_source": "面板估算",
+      "power": 75.7,
+      "schools": {
+        "ultimate": 0.9,
+        "shield": 0.6,
+        "haste": 0.5
+      },
+      "weak_to": [
+        "freeze",
+        "crit"
+      ],
+      "summary": "大招法核。天赋：每4秒释放一次能量护罩，持续吸收投射物并储存；大招：瞬间对敌人造成220点魔法伤害，并将储存的所有投射物奉还给敌人。",
+      "portrait": "",
+      "stats": {
+        "hp": 1000,
+        "attack": 20,
+        "attack_speed": 2.5,
+        "energy_regen": 12,
+        "dodge": 15,
+        "crit": 15
+      },
+      "talent": "每4秒释放一次能量护罩，持续吸收投射物并储存。",
+      "ultimate": "瞬间对敌人造成220点魔法伤害，并将储存的所有投射物奉还给敌人。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "shadow_swordsman",
+      "name": "疾影剑卫",
+      "aliases": [
+        "剑卫",
+        "疾影"
+      ],
+      "role": "急速大招刺客",
+      "difficulty": 2,
+      "tier": "A",
+      "tier_source": "社区示例",
+      "power": 82,
+      "schools": {
+        "haste": 1.0,
+        "ultimate": 0.7,
+        "dodge": 0.4
+      },
+      "weak_to": [
+        "freeze",
+        "shield"
+      ],
+      "summary": "每 3 秒获得急速层数，大招消耗急速打爆发；急速流与回能装成型后频率极高。",
+      "portrait": "",
+      "stats": {
+        "hp": 1000,
+        "attack": 20,
+        "attack_speed": 2.4,
+        "energy_regen": 11,
+        "dodge": 17,
+        "crit": 17
+      },
+      "talent": "每过3秒，获得（20+自身周期技能数*10）层急速。",
+      "ultimate": "瞬间消耗自身30%急速，对敌人造成（150+本次技能消耗急速层数*200%）点魔法伤害。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_59",
+      "name": "祷言圣女",
+      "aliases": [],
+      "role": "回复辅助",
+      "difficulty": 2,
+      "tier": "B",
+      "tier_source": "面板估算",
+      "power": 76.8,
+      "schools": {
+        "heal": 1.0,
+        "shield": 0.9,
+        "life": 0.5
+      },
+      "weak_to": [
+        "vulnerable",
+        "freeze"
+      ],
+      "summary": "回复辅助。天赋：自身生命值≥60%（含满血）时，获得的回复量会转化为90%的护盾；大招：治愈祷告大招每0.5秒回复自身85点生命值，持续2秒。",
+      "portrait": "",
+      "stats": {
+        "hp": 1300,
+        "attack": 19,
+        "attack_speed": 1.8,
+        "energy_regen": 10,
+        "dodge": 17,
+        "crit": 17
+      },
+      "talent": "自身生命值≥60%（含满血）时，获得的回复量会转化为90%的护盾。",
+      "ultimate": "治愈祷告大招每0.5秒回复自身85点生命值，持续2秒。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    },
+    {
+      "id": "hero_60",
+      "name": "枯樱石灵",
+      "aliases": [],
+      "role": "精灵召唤",
+      "difficulty": 2,
+      "tier": "B",
+      "tier_source": "面板估算",
+      "power": 78.5,
+      "schools": {
+        "spirit": 1.0,
+        "basic": 0.7,
+        "haste": 0.6
+      },
+      "weak_to": [
+        "freeze",
+        "vulnerable"
+      ],
+      "summary": "精灵召唤。天赋：每次普攻会为召唤的第一只精灵永久增加生命值1点，在下次战斗时生效；大招：攻击力增加30点，且自身每有只精灵，提升20%的攻速，持续3秒。",
+      "portrait": "",
+      "stats": {
+        "hp": 1100,
+        "attack": 24,
+        "attack_speed": 2.5,
+        "energy_regen": 10,
+        "dodge": 14,
+        "crit": 18
+      },
+      "talent": "每次普攻会为召唤的第一只精灵永久增加生命值1点，在下次战斗时生效。",
+      "ultimate": "攻击力增加30点，且自身每有只精灵，提升20%的攻速，持续3秒。",
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+    }
+  ]
+}

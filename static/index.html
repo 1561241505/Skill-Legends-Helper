@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>选技大乱斗 · 开局助手</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <div class="grain"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">选</div>
+      <div class="brand-copy">
+        <h1>选技大乱斗 <span>开局助手</span></h1>
+        <p>60 英雄 · 156 张卡牌 · 截图识别 · 三选一推荐</p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <div class="stat" title="已录入攻略的英雄数">
+        <b id="statGuides">--</b><span>篇攻略</span>
+      </div>
+      <div class="stat" title="已有头像模板的英雄数">
+        <b id="statHeroes">--</b><span>英雄识别</span>
+      </div>
+      <a class="btn ghost" href="/library">图鉴</a>
+      <button class="btn ghost" id="btnGuides" type="button">
+        <svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5v-13Z"/><path d="M8 3v18"/></svg>
+        攻略库
+      </button>
+      <button class="btn ghost" id="btnSettings" type="button">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06-2.83 2.83-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 .6 1.7 1.7 0 0 0-.4 1.1V21h-4v-.09A1.7 1.7 0 0 0 8.6 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06-2.83-2.83.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-.6-1 1.7 1.7 0 0 0-1.1-.4H3v-4h.09A1.7 1.7 0 0 0 4.6 8.6a1.7 1.7 0 0 0-.34-1.87l-.06-.06 2.83-2.83.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-.6 1.7 1.7 0 0 0 .4-1.1V3h4v.09A1.7 1.7 0 0 0 15.4 4.6a1.7 1.7 0 0 0 1.87-.34l.06-.06 2.83 2.83-.06.06A1.7 1.7 0 0 0 19.4 9c.14.37.36.7.66.96.3.26.68.4 1.07.4H21v4h-.09a1.7 1.7 0 0 0-1.51 1.64Z"/></svg>
+        设置
+      </button>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <section class="panel left-panel">
+      <div class="panel-heading">
+        <div>
+          <span class="eyebrow">STEP 01</span>
+          <h2>上传对局截图</h2>
+        </div>
+        <span class="tiny-note">Ctrl+V 可直接粘贴</span>
+      </div>
+
+      <div id="dropzone" class="dropzone">
+        <input id="fileInput" type="file" accept="image/png,image/jpeg,image/webp" hidden>
+        <div class="drop-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 16V4"/><path d="m7 9 5-5 5 5"/><path d="M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg>
+        </div>
+        <p class="drop-title">把开局选人界面拖到这里</p>
+        <p class="drop-sub">自动识别 3 个英雄与 8 启用 / 5 禁用流派</p>
+        <div class="drop-actions">
+          <button class="btn primary small" id="btnPick" type="button">选择截图</button>
+          <button class="btn ghost small" id="btnSample" type="button">试试示例</button>
+        </div>
+      </div>
+
+      <div id="previewWrap" class="preview-wrap" hidden>
+        <div class="preview-bar">
+          <span>识别标注</span>
+          <button class="link-btn" id="btnReplace" type="button">重新上传</button>
+        </div>
+        <img id="previewImg" alt="识别标注预览">
+      </div>
+
+      <div id="draftPanel" class="draft-panel" hidden>
+        <div class="section-head">
+          <h3>英雄候选</h3>
+          <span>识别不对可下拉修正，系统会记住新头像</span>
+        </div>
+        <div id="heroRow" class="hero-row"></div>
+
+        <div class="school-block">
+          <div class="section-head enabled-head">
+            <h3>启用流派 <em id="enabledCount">8</em></h3>
+            <span id="enabledHint">本局可成型的体系</span>
+          </div>
+          <div id="enabledChips" class="chips"></div>
+
+          <div class="section-head banned-head">
+            <h3>禁用流派 <em id="bannedCount">5</em></h3>
+            <span>点击任意流派可切换启用/禁用</span>
+          </div>
+          <div id="bannedChips" class="chips"></div>
+        </div>
+
+        <div class="draft-actions">
+          <button class="btn primary" id="btnAnalyze" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="4"/></svg>
+            生成推荐
+          </button>
+          <button class="btn ghost" id="btnResetDraft" type="button">恢复识别结果</button>
+        </div>
+        <p id="draftWarn" class="draft-warn" hidden></p>
+      </div>
+    </section>
+
+    <section class="panel right-panel">
+      <div class="panel-heading">
+        <div>
+          <span class="eyebrow">STEP 02</span>
+          <h2>本局推荐</h2>
+        </div>
+        <span class="tiny-note">评分可解释 · 攻略可溯源</span>
+      </div>
+
+      <div id="emptyState" class="empty-state">
+        <div class="empty-orbit">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+          <div class="orb orb-3"></div>
+          <div class="empty-core">
+            <svg viewBox="0 0 24 24"><path d="m12 3 2.2 6.1L20 12l-5.8 2.9L12 21l-2.2-6.1L4 12l5.8-2.9L12 3Z"/></svg>
+          </div>
+        </div>
+        <h3>等待一张开局截图</h3>
+        <p>识别英雄与流派后，会从攻略库检索证据，再按「基础强度 × 流派契合 × 本局环境 × 克制关系」给出三选一建议。</p>
+        <ul class="empty-steps">
+          <li><b>1</b> 上传截图，自动识别</li>
+          <li><b>2</b> 核对英雄与流派</li>
+          <li><b>3</b> 查看推荐与开局路线</li>
+        </ul>
+      </div>
+
+      <div id="loadingState" class="loading-state" hidden>
+        <div class="loader"></div>
+        <p id="loadingText">正在识别截图…</p>
+      </div>
+
+      <div id="resultContent" hidden>
+        <div id="verdictCard" class="verdict-card"></div>
+        <div class="env-card">
+          <div class="env-title">
+            <svg viewBox="0 0 24 24"><path d="M12 2 3 7l9 5 9-5-9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>
+            本局环境
+          </div>
+          <ul id="envNotes" class="env-notes"></ul>
+        </div>
+        <div id="cards" class="cards"></div>
+        <p class="disclaimer">评分是结构化数据的量化结果，不是绝对胜负预测。攻略与版本数据可随时在「攻略库」里修正。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>本地运行 · 截图不上传云端</span>
+    <span class="dot"></span>
+    <span>浮窗：F8 识别 · F9 隐藏</span>
+    <span class="dot"></span>
+    <span>图像识别 + BM25 检索 + 可解释评分</span>
+    <span class="dot"></span>
+    <span id="footerVersion">v0.1.0</span>
+  </footer>
+
+  <!-- Settings modal -->
+  <div class="modal-backdrop" id="settingsModal" hidden>
+    <div class="modal">
+      <div class="modal-head">
+        <div>
+          <span class="eyebrow">OPTIONAL</span>
+          <h2>AI 点评设置</h2>
+        </div>
+        <button class="icon-btn" data-close="settingsModal" type="button">×</button>
+      </div>
+      <p class="modal-lead">不配置也能使用全部识别、检索与评分功能。配置 OpenAI 兼容接口后，可以让模型基于检索到的攻略写一段点评。</p>
+      <label class="switch-row">
+        <span><b>启用 AI 点评</b><small>只发送本局结构化数据与攻略摘录</small></span>
+        <input type="checkbox" id="llmEnabled">
+        <i class="switch"></i>
+      </label>
+      <div class="field">
+        <label for="llmBase">API 地址</label>
+        <input id="llmBase" type="text" placeholder="https://api.deepseek.com/v1" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="llmModel">模型</label>
+        <input id="llmModel" type="text" placeholder="deepseek-chat" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="llmKey">API Key</label>
+        <input id="llmKey" type="password" placeholder="sk-..." autocomplete="new-password">
+        <small id="llmKeyHint">尚未配置。Key 只保存在本机 data/settings.json。</small>
+      </div>
+      <div class="modal-actions">
+        <button class="btn ghost" data-close="settingsModal" type="button">取消</button>
+        <button class="btn primary" id="btnSaveSettings" type="button">保存设置</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Guide modal -->
+  <div class="modal-backdrop" id="guidesModal" hidden>
+    <div class="modal wide">
+      <div class="modal-head">
+        <div>
+          <span class="eyebrow">KNOWLEDGE BASE</span>
+          <h2>全英雄攻略库</h2>
+        </div>
+        <button class="icon-btn" data-close="guidesModal" type="button">×</button>
+      </div>
+      <div class="guide-layout">
+        <div class="guide-side">
+          <input id="guideSearch" class="guide-search" type="search" placeholder="搜索英雄…" autocomplete="off">
+          <div id="guideList" class="guide-list"></div>
+        </div>
+        <div class="guide-main">
+          <div class="guide-main-head">
+            <div>
+              <h3 id="guideHeroName">选择一个英雄</h3>
+              <p id="guideMeta">攻略会按段落切分，进入 BM25 检索索引。</p>
+            </div>
+            <button class="btn ghost small" id="btnGuideTemplate" type="button">插入模板</button>
+          </div>
+          <textarea id="guideEditor" spellcheck="false" placeholder="选择左侧英雄开始编辑…"></textarea>
+          <div class="guide-foot">
+            <span id="guideCount">0 字</span>
+            <span class="save-tip" id="guideSaveTip"></span>
+            <button class="btn primary small" id="btnSaveGuide" type="button">保存并重建索引</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

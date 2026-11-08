@@ -1,0 +1,21 @@
+* text=auto
+
+# Windows launchers must stay CRLF in the repository
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Source and web assets
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+
+# Binary assets
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.xlsx binary
+*.xls binary

@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local settings / runtime state
+data/settings.json
+data/uploads/
+data/captures/
+data/server_url.txt
+data/overlay_position.json
+data/meta_stats.json
+
+# Test browser profiles
+.chrome-*/
+
+# Logs / OS / editor
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Secrets
+.env
+.env.*
