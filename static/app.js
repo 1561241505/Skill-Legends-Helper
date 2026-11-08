@@ -281,7 +281,8 @@
       const selected = state.selectedHeroes[i] || "";
       const card = document.createElement("div");
       card.className = "hero-card" + (selected ? "" : " unknown");
-      const img = portraitUrl(hero.portrait);
+      const catalogHero = state.catalog.heroes.find((h) => h.name === selected) || state.catalog.heroes.find((h) => h.name === hero.name);
+      const img = portraitUrl((catalogHero && catalogHero.art) || hero.portrait);
       const options = ['<option value="">请选择英雄</option>'];
       if (selected && !state.heroMap.has(selected)) {
         options.push('<option value="' + escapeHtml(selected) + '" selected>' + escapeHtml(selected) + "</option>");
@@ -310,7 +311,7 @@
       if (!name || !name.trim()) { renderHeroes(); return; }
       value = name.trim();
       if (!state.heroMap.has(value)) {
-        state.catalog.heroes.push({ name: value, tier: "?", role: "未收录", portrait: "", has_guide: false });
+        state.catalog.heroes.push({ name: value, tier: "?", role: "未收录", portrait: "", art: "", has_guide: false });
         state.heroMap.set(value, state.catalog.heroes[state.catalog.heroes.length - 1]);
       }
     }
@@ -401,7 +402,7 @@
       $("#cards").innerHTML = "";
       return;
     }
-    const portrait = portraitUrl(top.portrait);
+    const portrait = portraitUrl(top.art || top.portrait);
     const conf = CONFIDENCE_TEXT[top.confidence] || top.confidence;
     const mainSchools = (top.build.schools || []).slice(0, 2).join(" + ");
     verdict.innerHTML =
@@ -460,7 +461,7 @@
     const el = document.createElement("article");
     el.className = "rec-card" + (index === 0 ? " top" : "");
     el.style.animationDelay = Math.min(index * 0.05, 0.2) + "s";
-    const portrait = portraitUrl(card.portrait);
+    const portrait = portraitUrl(card.art || card.portrait);
     const b = card.breakdown || {};
     const reasons = (card.reasons || []).map((r) => "<li>" + escapeHtml(r) + "</li>").join("");
     const steps = (card.build && card.build.steps ? card.build.steps : []).map((s) => "<li>" + escapeHtml(s) + "</li>").join("");
@@ -484,6 +485,9 @@
         (ev.source ? '<div class="ev-src">来源：' + escapeHtml(ev.source) + "</div>" : "") +
       "</div>"
     ).join("");
+    const skillIcons =
+      (card.talent_icon ? '<img class="rec-skill" src="' + portraitUrl(card.talent_icon) + '" title="天赋" alt="">' : "") +
+      (card.ultimate_icon ? '<img class="rec-skill" src="' + portraitUrl(card.ultimate_icon) + '" title="大招" alt="">' : "");
     el.innerHTML =
       '<div class="rec-head">' +
         (portrait ? '<img class="rec-portrait" src="' + portrait + '" alt="">' : "") +
@@ -492,7 +496,7 @@
             '<span class="tag">' + escapeHtml(card.tier || "?") + " 级</span>" +
             (index === 0 ? '<span class="tag" style="color:#f2d18c;border-color:rgba(231,189,97,.3);background:rgba(231,189,97,.08)">首选</span>' : "") +
           "</h3>" +
-          "<p>" + escapeHtml(card.role || "") + " · " + (card.has_guide ? "有攻略" : "暂无攻略") + "</p>" +
+          "<p>" + escapeHtml(card.role || "") + " · " + (card.has_guide ? "有攻略" : "暂无攻略") + skillIcons + "</p>" +
         "</div>" +
         '<div class="rec-score"><b>' + escapeHtml(card.score) + "</b><span>" + escapeHtml(CONFIDENCE_TEXT[card.confidence] || "备选") + "</span></div>" +
       "</div>" +
@@ -633,7 +637,7 @@
         const meta = state.heroMap.get(row.name);
         const div = document.createElement("div");
         div.className = "guide-row" + (row.has_guide ? " has-guide" : "") + (state.guideHero === row.name ? " active" : "");
-        const portrait = meta && meta.portrait ? portraitUrl(meta.portrait) : "";
+        const portrait = meta && (meta.art || meta.portrait) ? portraitUrl(meta.art || meta.portrait) : "";
         div.innerHTML =
           (portrait ? '<img class="gi" src="' + portrait + '" alt="">' : '<span class="gi" style="display:grid;place-items:center;color:#8fa0b5">' + escapeHtml(row.name.slice(0, 1)) + "</span>") +
           '<span class="gn">' + escapeHtml(row.name) + "</span>" +

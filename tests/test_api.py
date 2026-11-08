@@ -95,6 +95,12 @@ class ApiTest(unittest.TestCase):
         hero = next(h for h in data["heroes"] if h["name"] == "神秘法师")
         self.assertTrue(hero["core_cards"])
         self.assertEqual(len(hero["stats"]), 6)
+        self.assertTrue(hero["art"].startswith("/data/art/heroes/"))
+        self.assertTrue(hero["talent_icon"].startswith("/data/art/skills/"))
+
+        with urllib.request.urlopen(self.base + hero["art"], timeout=10) as resp:
+            self.assertEqual(resp.status, 200)
+            self.assertEqual(resp.headers.get_content_type(), "image/png")
 
         status, cards = self._request("GET", "/api/cards")
         self.assertEqual(status, 200)

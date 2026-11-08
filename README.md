@@ -4,7 +4,7 @@
 
 不再需要截图、切浏览器、粘贴。识别 + 检索 + 推荐大约 **1 秒**。
 
-![浮窗实机效果](docs/overlay-demo.jpg)
+![浮窗效果（示例画面）](docs/overlay-demo.jpg)
 
 > ⚠️ **重要：请把游戏设为「窗口化」或「无边框全屏 / Borderless」。**
 > 独占全屏（Exclusive Fullscreen）会绕过 Windows 桌面合成器：普通置顶浮窗无法覆盖它，GDI 截图通常也会得到黑屏。这是 Windows 的限制，不是助手不工作。游戏里的「全屏」如果实际是独占模式，请改成「无边框窗口」。
@@ -18,6 +18,7 @@
 - **按住卡片任意位置拖动**，松手即保存位置；下次启动/下次识别仍在原处
 - 浮窗内容：本局首选 + 评分 + 两条核心理由 + **核心卡（名称/稀有度/首卡效果）** + 开局路线 + 备选 + 13 个流派对照
 - **英雄图鉴 / 卡牌库 / 规则速查**：60 个英雄的面板、天赋、大招、推荐流派、6 张核心卡、克制关系；156 张卡牌可搜索/筛选；13 流派机制
+- **60 张英雄立绘 + 120 张天赋/大招图标**：浮窗、结果卡、图鉴全部换成正式立绘；详情页显示技能图标
 - **网页控制台**仍在：攻略库、设置、手动上传修正、AI 点评
 - 所有识别、检索、评分都在本地完成；不配置任何 API Key 也能用
 
@@ -112,7 +113,18 @@ python tools/preview_draft.py 30
 
 核心卡不是固定写死的：`app/kb/cards.py` 会按英雄的主/副流派、卡牌稀有度、双流派联动、卡牌与主系的重合度排序，优先传说卡，同一主系最多两张，避免六张全是同质攻击卡。浮窗显示前 3 张 + 首卡效果，网页详情显示 6 张完整效果。
 
-### 2.6 依赖
+### 2.6 英雄立绘与技能图标
+
+- `data/art/heroes/<hero_id>.png`：60 张 300×300 立绘，用于浮窗、结果卡、图鉴列表/详情
+- `data/art/skills/<hero_id>_talent.png`：60 张 128×128 天赋图标
+- `data/art/skills/<hero_id>_ultimate.png`：60 张 128×128 大招图标
+- 图标已经去掉源图的浅黄底，透明背景，直接叠在深色卡片上
+- 数据字段：`art`、`talent_icon`、`ultimate_icon`，见 [heroes.json](选技助手/data/heroes.json)
+- 原始素材可用 [import_art_assets.py](选技助手/tools/import_art_assets.py) 重新导入
+
+> **识别模板和展示立绘是两套。** `data/templates/heroes/` 里的 147×224 游戏内截图仍然只用于自动识别；300×300 立绘只用于显示，不参与模板匹配。当前自动识别仍是 3 个模板，图鉴和手动选择覆盖 60 个英雄。
+
+### 2.7 依赖
 
 只有两个第三方依赖：
 
@@ -407,7 +419,8 @@ BM25 使用中文 bigram 分词（「大招流」→ 大招 / 招流），不依
 │  ├─ guides/*.md
 │  ├─ meta_stats.example.json
 │  ├─ source/                # 你提供的 xlsx / txt 原件
-│  └─ templates/
+│  ├─ art/                   # 60 张立绘 + 120 张技能图标
+│  └─ templates/             # 147×224 识别模板 + 流派图标
 ├─ static/                   # 网页控制台（原生 JS）
 │  ├─ index.html / app.js / styles.css
 │  └─ library.html / library.js / library.css   # 英雄图鉴 / 卡牌库 / 规则
@@ -415,7 +428,8 @@ BM25 使用中文 bigram 分词（「大招流」→ 大招 / 招流），不依
 ├─ tools/
 │  ├─ preview_draft.py       # 全屏示例，用来测试识别键
 │  ├─ import_game_data.py    # Excel/规则 → JSON
-│  └─ build_templates.py     # 从示例重建模板
+│  ├─ import_art_assets.py   # 英雄立绘/技能图标 → data/art
+│  └─ build_templates.py     # 从示例重建识别模板
 ├─ docs/
 ├─ tests/
 └─ requirements.txt
@@ -520,8 +534,9 @@ A：默认只监听 `127.0.0.1`，截图只在内存和 `data/captures/last.png`
 | `选技英雄数据.xlsx` | 60 英雄：生命/攻击/攻速/回能/闪避/暴击/天赋/大招 | `data/heroes.json` |
 | `卡牌库.xlsx` | 156 卡牌：名称/稀有度/双流派/卡池数量/基础值/效果模板；13 流派 ID 表 | `data/cards.json` |
 | `游戏规则.txt` | 基础属性、经济/利息、13 流派机制 | `data/rules.json`、`data/schools.json` |
+| `选技图片素材/` | 60 张 300×300 英雄立绘、60 张天赋图标、60 张大招图标 | `data/art/` |
 
-原始文件复制在 `data/source/`，`tools/import_game_data.py` 可重复导入。导入时会保留已有头像模板/攻略/别名，并把「熊猫」迁移为「熊猫武士」、「恶灵祖母」迁移为「恶灵主母」。
+原始文件复制在 `data/source/`，`tools/import_game_data.py` 可重复导入。导入时会保留已有头像模板/攻略/别名，并把「熊猫」迁移为「熊猫武士」、「恶灵祖母」迁移为「恶灵主母」。图片素材用 `tools/import_art_assets.py` 导入，会自动处理「渣克鼠王/炼金术师/月影猎手」这三处源文件拼写差异。
 
 - 英雄强度 `power/tier` 是你提供的数据表里没有的字段：匹配到的旧英雄保留初始整理值，新英雄用基础面板估算；图鉴顶部会明确写「不是官方胜率」。想校正直接改 `data/heroes.json`。
 - 卡牌表只提供 `base_val_1`。`{val}` 用基础值，`{valN}` 按基础值 × N 渲染（例如 110 号「闪避狂热」的基础值 3、`{val4}` 显示 12），并在数据里保留 `scaled_values` 标记；实际数值以游戏内卡牌等级为准。

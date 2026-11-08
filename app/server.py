@@ -17,6 +17,7 @@ from typing import Any, Dict, Optional, Tuple
 from urllib.parse import parse_qs, unquote, urlparse
 
 from .config import (
+    ART_DIR,
     BASE_DIR,
     DATA_DIR,
     GUIDE_DIR,
@@ -177,6 +178,9 @@ class Handler(BaseHTTPRequestHandler):
             if path.startswith("/data/templates/"):
                 rel = unquote(path[len("/data/templates/"):])
                 return self._serve_file(TEMPLATE_DIR / rel)
+            if path.startswith("/data/art/"):
+                rel = unquote(path[len("/data/art/"):])
+                return self._serve_file(ART_DIR / rel)
             if path == "/api/status":
                 return self._status()
             if path == "/api/catalog":
@@ -207,7 +211,7 @@ class Handler(BaseHTTPRequestHandler):
             resolved = path.resolve()
             allowed = any(
                 resolved == root.resolve() or root.resolve() in resolved.parents
-                for root in (STATIC_DIR, TEMPLATE_DIR)
+                for root in (STATIC_DIR, TEMPLATE_DIR, ART_DIR)
             )
             if not allowed or not resolved.is_file():
                 self._error("File not found", 404)
@@ -264,6 +268,7 @@ class Handler(BaseHTTPRequestHandler):
                 "role": h.get("role", ""),
                 "power": h.get("power", 0),
                 "portrait": "/" + h["portrait"] if h.get("portrait") else "",
+                "art": "/" + h["art"] if h.get("art") else "",
                 "has_guide": h["name"] in guide_map,
             }
             for h in rec.heroes
@@ -278,7 +283,9 @@ class Handler(BaseHTTPRequestHandler):
             detail = adv.hero_detail(hero["name"])
             if detail:
                 detail["has_guide"] = hero["name"] in guide_map
-                detail["portrait"] = "/" + detail["portrait"] if detail.get("portrait") else ""
+                for key in ("portrait", "art", "talent_icon", "ultimate_icon"):
+                    if detail.get(key):
+                        detail[key] = "/" + detail[key]
                 heroes.append(detail)
         schools = []
         for school in adv.schools:
@@ -318,7 +325,9 @@ class Handler(BaseHTTPRequestHandler):
         if not detail:
             self._error("未收录该英雄", 404)
             return
-        detail["portrait"] = "/" + detail["portrait"] if detail.get("portrait") else ""
+        for key in ("portrait", "art", "talent_icon", "ultimate_icon"):
+            if detail.get(key):
+                detail[key] = "/" + detail[key]
         self._json({"ok": True, "hero": detail})
 
     def _cards(self) -> None:

@@ -133,7 +133,7 @@
     });
     $("#heroResultCount").textContent = heroes.length + " / " + state.heroes.length + " 位英雄";
     $("#heroGrid").innerHTML = heroes.map((hero) => {
-      const portrait = portraitUrl(hero.portrait);
+      const portrait = portraitUrl(hero.art || hero.portrait);
       const schools = (hero.schools || []).slice(0, 3).map(schoolTag).join("");
       return (
         '<article class="hero-tile' + (state.selected === hero.name ? " active" : "") + '" data-name="' + escapeHtml(hero.name) + '">' +
@@ -165,7 +165,7 @@
   }
 
   function renderDetail(hero) {
-    const portrait = portraitUrl(hero.portrait);
+    const portrait = portraitUrl(hero.art || hero.portrait);
     const schoolRows = (hero.schools || []).map((s) => {
       const width = Math.max(4, Math.round((s.weight || 0) * 100));
       return (
@@ -212,8 +212,12 @@
         statCell("回能", stats.energy_regen, "/s") + statCell("闪避", stats.dodge, "%") + statCell("暴击", stats.crit, "%") +
       "</div></div>" +
       '<div class="detail-section"><div class="detail-title">天赋 / 大招</div>' +
-        '<div class="skill-box"><b>天赋</b><p>' + escapeHtml(hero.talent || "—") + "</p></div>" +
-        '<div class="skill-box"><b>大招</b><p>' + escapeHtml(hero.ultimate || "—") + "</p></div>" +
+        '<div class="skill-box skill-box-icon">' +
+          (hero.talent_icon ? '<img class="skill-icon" src="' + portraitUrl(hero.talent_icon) + '" alt="">' : "") +
+          '<div><b>天赋</b><p>' + escapeHtml(hero.talent || "—") + "</p></div></div>" +
+        '<div class="skill-box skill-box-icon">' +
+          (hero.ultimate_icon ? '<img class="skill-icon" src="' + portraitUrl(hero.ultimate_icon) + '" alt="">' : "") +
+          '<div><b>大招</b><p>' + escapeHtml(hero.ultimate || "—") + "</p></div></div>" +
       "</div>" +
       '<div class="detail-section"><div class="detail-title">推荐流派</div>' + (schoolRows || '<p class="tiny-note">暂无流派数据</p>') + "</div>" +
       '<div class="detail-section"><div class="detail-title">核心卡 · 优先围绕主系抓取</div><div class="core-list">' + (core || '<p class="tiny-note">暂无匹配卡牌</p>') + "</div></div>" +

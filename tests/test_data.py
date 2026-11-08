@@ -2,6 +2,8 @@ import json
 import unittest
 from pathlib import Path
 
+from PIL import Image
+
 from app.kb.guides import load_guides
 from app.kb.recommend import Advisor
 
@@ -51,6 +53,26 @@ class GameDataTest(unittest.TestCase):
         hero_schools = set(hero["schools"])
         for card in cards:
             self.assertTrue(set(card["factions"]) & {self.advisor.school_by_id[s]["name"] for s in hero_schools})
+
+    def test_art_and_skill_icons(self):
+        for hero in self.advisor.heroes:
+            for key, size in (("art", (300, 300)), ("talent_icon", (128, 128)), ("ultimate_icon", (128, 128))):
+                value = hero.get(key)
+                self.assertTrue(value, "%s missing %s" % (hero["name"], key))
+                path = ROOT / value
+                self.assertTrue(path.exists(), "%s missing file %s" % (hero["name"], path))
+                with Image.open(path) as image:
+                    self.assertEqual(image.size, size)
+            with Image.open(ROOT / hero["art"]) as image:
+                self.assertEqual(image.mode, "RGB")
+            with Image.open(ROOT / hero["talent_icon"]) as image:
+                self.assertEqual(image.mode, "RGBA")
+
+    def test_asset_name_aliases(self):
+        for name, alias in (("渣客鼠王", "渣克鼠王"), ("炼金术士", "炼金术师"), ("月隐猎手", "月影猎手")):
+            hero, _ = self.advisor.resolve_hero(alias)
+            self.assertIsNotNone(hero)
+            self.assertEqual(hero["name"], name)
 
     def test_guide_migrated(self):
         guides = load_guides()

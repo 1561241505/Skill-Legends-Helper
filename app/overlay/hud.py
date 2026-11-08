@@ -245,7 +245,7 @@ def render_result(
 
     top = cards[0]
     # portrait
-    portrait = _portrait(top.get("portrait", ""), (78, 100))
+    portrait = _portrait(top.get("art") or top.get("portrait", ""), (78, 100))
     image.paste(_rounded_image(portrait, 12), (22, 48))
     draw.rectangle([22, 48, 99, 147], outline=(54, 68, 86), width=1)
 

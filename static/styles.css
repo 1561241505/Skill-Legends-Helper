@@ -311,7 +311,8 @@ body {
 .rec-portrait { width: 46px; height: 62px; border-radius: 9px; object-fit: cover; background: #0a0e13; border: 1px solid var(--line); }
 .rec-name { flex: 1; min-width: 0; }
 .rec-name h3 { margin: 0; font-size: 16px; display: flex; align-items: center; gap: 7px; }
-.rec-name p { margin: 4px 0 0; color: var(--dim); font-size: 11px; }
+.rec-name p { margin: 4px 0 0; color: var(--dim); font-size: 11px; display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+.rec-skill { width: 18px; height: 18px; object-fit: contain; vertical-align: -4px; opacity: .9; }
 .rec-rank { color: var(--dim); font-size: 11px; letter-spacing: 1px; }
 .rec-score { text-align: right; }
 .rec-score b { display: block; font-size: 24px; line-height: 1; color: var(--text); }

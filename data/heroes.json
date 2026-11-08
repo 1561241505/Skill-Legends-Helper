@@ -7,7 +7,8 @@
       "选技英雄数据.xlsx",
       "卡牌库.xlsx",
       "游戏规则.txt"
-    ]
+    ],
+    "art_note": "art/talent_icon/ultimate_icon 来自选技图片素材；portrait 仍是 147x224 游戏内识别模板。"
   },
   "heroes": [
     {
@@ -43,7 +44,10 @@
       },
       "talent": "每进行1场战斗，增加自身2点攻击力",
       "ultimate": "劈出刀光飞向敌人，对敌人造成（130+自身攻击*4）点物理伤害。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/blade_chief.png",
+      "talent_icon": "data/art/skills/blade_chief_talent.png",
+      "ultimate_icon": "data/art/skills/blade_chief_ultimate.png"
     },
     {
       "id": "hidden_blade",
@@ -78,7 +82,10 @@
       },
       "talent": "突破极限！隐匿之刃的闪避上限提升5点。且每次英雄升级，增加自身1点闪避。",
       "ultimate": "投掷2把苦无，每把苦无对敌人造成120点魔法伤害，同时临时增加自身12点闪避，持续4秒。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hidden_blade.png",
+      "talent_icon": "data/art/skills/hidden_blade_talent.png",
+      "ultimate_icon": "data/art/skills/hidden_blade_ultimate.png"
     },
     {
       "id": "hero_03",
@@ -113,7 +120,10 @@
       },
       "talent": "暴击伤害倍率增加40%",
       "ultimate": "扔出一枚炸弹，对敌人造成（240+暴击*3）点神圣伤害，同时减少敌人同样数值的最大生命上限。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_03.png",
+      "talent_icon": "data/art/skills/hero_03_talent.png",
+      "ultimate_icon": "data/art/skills/hero_03_ultimate.png"
     },
     {
       "id": "dwarf_lord",
@@ -147,7 +157,10 @@
       },
       "talent": "每进行1场战斗，增加自身25点最大生命值",
       "ultimate": "投掷钢锤飞向敌人，造成(180+英雄最大生命*6%)点魔法伤害。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/dwarf_lord.png",
+      "talent_icon": "data/art/skills/dwarf_lord_talent.png",
+      "ultimate_icon": "data/art/skills/dwarf_lord_ultimate.png"
     },
     {
       "id": "panda",
@@ -182,7 +195,10 @@
       },
       "talent": "每当自身受到伤害时，35%概率回复（英雄等级+5）点生命。",
       "ultimate": "立即回复120点生命，同时抛出一坛美酒，对敌人造成200点魔法伤害。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/panda.png",
+      "talent_icon": "data/art/skills/panda_talent.png",
+      "ultimate_icon": "data/art/skills/panda_ultimate.png"
     },
     {
       "id": "mystic_mage",
@@ -218,7 +234,10 @@
       },
       "talent": "战斗开始后，每释放1次大招，都会使下一次大招伤害提升50%，最多提升300%。",
       "ultimate": "召唤一只由能量构成的法球飞向敌人，对敌人造成（220+英雄等级*15）点魔法伤害。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/mystic_mage.png",
+      "talent_icon": "data/art/skills/mystic_mage_talent.png",
+      "ultimate_icon": "data/art/skills/mystic_mage_ultimate.png"
     },
     {
       "id": "plague_witch",
@@ -253,7 +272,10 @@
       },
       "talent": "敌人受到的中毒伤害增加（英雄等级*6）点。",
       "ultimate": "抛出一颗蕴含剧毒的法球，对敌人添加160层中毒。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/plague_witch.png",
+      "talent_icon": "data/art/skills/plague_witch_talent.png",
+      "ultimate_icon": "data/art/skills/plague_witch_ultimate.png"
     },
     {
       "id": "hero_08",
@@ -285,7 +307,10 @@
       },
       "talent": "每累计对敌人施加50层冰冻，随机使敌人发射的飞行中的1个投射物冻住失效。",
       "ultimate": "召唤冰块从天而降砸向敌人，造成0.8秒眩晕及300点物理伤害。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_08.png",
+      "talent_icon": "data/art/skills/hero_08_talent.png",
+      "ultimate_icon": "data/art/skills/hero_08_ultimate.png"
     },
     {
       "id": "hero_09",
@@ -320,7 +345,10 @@
       },
       "talent": "精灵在场时自身的生命回复效果减少50%但每次回复时会对敌人造成（该次生命回复量*160%)点魔法伤害。",
       "ultimate": "发射暗影箭对敌人造成210点魔法伤害，并使敌人的回复效果降低80%，持续3秒。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_09.png",
+      "talent_icon": "data/art/skills/hero_09_talent.png",
+      "ultimate_icon": "data/art/skills/hero_09_ultimate.png"
     },
     {
       "id": "forest_ranger",
@@ -356,7 +384,10 @@
       },
       "talent": "每隔6秒发射10支箭支伤害敌人，每支箭造成15点物理伤害，每次施放大招会使下次箭雨的到来提前3秒。",
       "ultimate": "射出巨型光箭对敌人造成240点魔法伤害，同时闪避接下来的5次物理伤害。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/forest_ranger.png",
+      "talent_icon": "data/art/skills/forest_ranger_talent.png",
+      "ultimate_icon": "data/art/skills/forest_ranger_ultimate.png"
     },
     {
       "id": "hero_11",
@@ -388,7 +419,10 @@
       },
       "talent": "每损失1点玩家生命，提升20点最大生命。",
       "ultimate": "喷射尖刺，对敌人造成（200+已损失玩家生命*5）点魔法伤害。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_11.png",
+      "talent_icon": "data/art/skills/hero_11_talent.png",
+      "ultimate_icon": "data/art/skills/hero_11_ultimate.png"
     },
     {
       "id": "hero_12",
@@ -420,12 +454,17 @@
       },
       "talent": "每当发射一个非普通攻击的投射物时，额外发射一个它的复制品，造成原投射物35%的伤害。",
       "ultimate": "发射5个随机的非普通攻击投射物，每个投射物最少造成30点伤害。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_12.png",
+      "talent_icon": "data/art/skills/hero_12_talent.png",
+      "ultimate_icon": "data/art/skills/hero_12_ultimate.png"
     },
     {
       "id": "hero_13",
       "name": "渣客鼠王",
-      "aliases": [],
+      "aliases": [
+        "渣克鼠王"
+      ],
       "role": "中毒法系",
       "difficulty": 2,
       "tier": "C",
@@ -451,7 +490,10 @@
       },
       "talent": "造成非炸药伤害时，80%概率向下水道投入1枚对应伤害类型的炸药。累计10枚后引爆，每枚炸药造成（20+自身等级*1）点伤害。",
       "ultimate": "向下水道投入5枚物理炸药、10枚魔法炸药。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_13.png",
+      "talent_icon": "data/art/skills/hero_13_talent.png",
+      "ultimate_icon": "data/art/skills/hero_13_ultimate.png"
     },
     {
       "id": "hero_14",
@@ -483,7 +525,10 @@
       },
       "talent": "每拥有1个不同的护盾流技能，增加自身35点最大生命。",
       "ultimate": "立即获得(英雄最大生命*6%)层护盾，同时向敌人扔出斩斧，造成170点物理伤害。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_14.png",
+      "talent_icon": "data/art/skills/hero_14_talent.png",
+      "ultimate_icon": "data/art/skills/hero_14_ultimate.png"
     },
     {
       "id": "hero_15",
@@ -515,7 +560,10 @@
       },
       "talent": "暴击时偷取敌方英雄（自身最大生命值*1.5%）点最大生命值。",
       "ultimate": "召唤利刃分割敌人，瞬间造成(200+双方最大生命值之差*10%）点物理伤害。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_15.png",
+      "talent_icon": "data/art/skills/hero_15_talent.png",
+      "ultimate_icon": "data/art/skills/hero_15_ultimate.png"
     },
     {
       "id": "miser",
@@ -551,7 +599,10 @@
       },
       "talent": "基础利息上限增加50金币",
       "ultimate": "扔出金币炸弹，对敌人造成（300+拥有金币数*25%）点物理伤害。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/miser.png",
+      "talent_icon": "data/art/skills/miser_talent.png",
+      "ultimate_icon": "data/art/skills/miser_ultimate.png"
     },
     {
       "id": "hero_17",
@@ -583,7 +634,10 @@
       },
       "talent": "每拥有1个不同的技能，增加15点最大生命值。",
       "ultimate": "喷射龙焰对目标造成（200+双方等级之和*15）的魔法伤害。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_17.png",
+      "talent_icon": "data/art/skills/hero_17_talent.png",
+      "ultimate_icon": "data/art/skills/hero_17_ultimate.png"
     },
     {
       "id": "magic_mirror",
@@ -618,7 +672,10 @@
       },
       "talent": "受到的所有伤害减少10%，只有每次受到伤害时才会进行一次普攻。",
       "ultimate": "快速打出9次普攻",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/magic_mirror.png",
+      "talent_icon": "data/art/skills/magic_mirror_talent.png",
+      "ultimate_icon": "data/art/skills/magic_mirror_ultimate.png"
     },
     {
       "id": "chaos_apostle",
@@ -653,7 +710,10 @@
       },
       "talent": "敌方英雄血量低于33%时，立即施加（50+英雄等级*5）层易伤，每场战斗只会触发1次。",
       "ultimate": "召唤出两个法球攻击敌人，分别造成150点物理伤害和150点魔法伤害。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/chaos_apostle.png",
+      "talent_icon": "data/art/skills/chaos_apostle_talent.png",
+      "ultimate_icon": "data/art/skills/chaos_apostle_ultimate.png"
     },
     {
       "id": "hero_20",
@@ -685,7 +745,10 @@
       },
       "talent": "战斗开始后每过1.5秒，同时提升1点闪避和暴击，最多提升8点。",
       "ultimate": "召唤龙卷风团吹向敌人，对敌人造成自身（（闪避+暴击）*4)点魔法伤害。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_20.png",
+      "talent_icon": "data/art/skills/hero_20_talent.png",
+      "ultimate_icon": "data/art/skills/hero_20_ultimate.png"
     },
     {
       "id": "astral_mage",
@@ -720,7 +783,10 @@
       },
       "talent": "每次受到魔法伤害，回复2点能量",
       "ultimate": "召唤乌鸦打击敌人造成(260+易伤层数*1.5)点魔法伤害。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/astral_mage.png",
+      "talent_icon": "data/art/skills/astral_mage_talent.png",
+      "ultimate_icon": "data/art/skills/astral_mage_ultimate.png"
     },
     {
       "id": "hero_22",
@@ -752,7 +818,10 @@
       },
       "talent": "精灵获得（英雄等级*1.5）点伤害减免。",
       "ultimate": "召唤藤蔓缠绕敌人，每1秒造成150点魔法伤害共持续2秒，释放大招时每个在场的精灵会使根须的存在时间增加1秒。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_22.png",
+      "talent_icon": "data/art/skills/hero_22_talent.png",
+      "ultimate_icon": "data/art/skills/hero_22_ultimate.png"
     },
     {
       "id": "hero_23",
@@ -783,7 +852,10 @@
       },
       "talent": "敌人的当前生命相比最大生命每减少10%就会提升自身6%攻击速度。",
       "ultimate": "召唤毒风环绕敌人，立即施加70层中毒，且接下来的3秒内，普通攻击会额外施加10层中毒。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_23.png",
+      "talent_icon": "data/art/skills/hero_23_talent.png",
+      "ultimate_icon": "data/art/skills/hero_23_ultimate.png"
     },
     {
       "id": "flame_djinn",
@@ -818,7 +890,10 @@
       },
       "talent": "大招有（35+自身暴击*0.8)%的概率再次释放，最多可以再次释放4次。（再次释放不计算大招次数）",
       "ultimate": "向敌人抛出一枚火球，造成200点魔法伤害并眩晕0.3秒。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/flame_djinn.png",
+      "talent_icon": "data/art/skills/flame_djinn_talent.png",
+      "ultimate_icon": "data/art/skills/flame_djinn_ultimate.png"
     },
     {
       "id": "hero_25",
@@ -849,7 +924,10 @@
       },
       "talent": "每次对敌人施加中毒时，33%概率同时对敌人施加15层冰冻。",
       "ultimate": "向敌人投掷4瓶特制药剂，每瓶寸敌人施加30层中毒与冰冻。敌方每损失10%生命值，投掷数量曾加1瓶。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_25.png",
+      "talent_icon": "data/art/skills/hero_25_talent.png",
+      "ultimate_icon": "data/art/skills/hero_25_ultimate.png"
     },
     {
       "id": "hero_26",
@@ -881,7 +959,10 @@
       },
       "talent": "每获得10点怒气，回复1点能量",
       "ultimate": "对敌人造成（310+当前怒气值*33%）的魔法伤害。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_26.png",
+      "talent_icon": "data/art/skills/hero_26_talent.png",
+      "ultimate_icon": "data/art/skills/hero_26_ultimate.png"
     },
     {
       "id": "hero_27",
@@ -913,7 +994,10 @@
       },
       "talent": "狂怒状态下每层护盾可以额外多抵挡0.8点伤害。",
       "ultimate": "凝聚能量从天而降，对敌方英雄造成（230+两次大招释放期间累计护盾实际抵挡伤害*20%）点魔法伤害",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_27.png",
+      "talent_icon": "data/art/skills/hero_27_talent.png",
+      "ultimate_icon": "data/art/skills/hero_27_ultimate.png"
     },
     {
       "id": "hero_28",
@@ -945,7 +1029,10 @@
       },
       "talent": "战斗开始后每过4秒都会有一只精灵来支援你，精灵的生命值为（40+自身等级*10）。",
       "ultimate": "呼唤荒野的力量对敌人造成（200+场上精灵数量*30）点魔法伤害，并为场上生命值比例最低的精灵回复100点生命值。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_28.png",
+      "talent_icon": "data/art/skills/hero_28_talent.png",
+      "ultimate_icon": "data/art/skills/hero_28_ultimate.png"
     },
     {
       "id": "hero_29",
@@ -977,7 +1064,10 @@
       },
       "talent": "每当获得护盾时，有（10+自身暴击*1）%的概率额外获得30层护盾。",
       "ultimate": "进入持续3秒的充能状态，发射两块巨大的石头造成120点物理伤害，充能状态中每获得60层护盾会额外发射一块石头。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_29.png",
+      "talent_icon": "data/art/skills/hero_29_talent.png",
+      "ultimate_icon": "data/art/skills/hero_29_ultimate.png"
     },
     {
       "id": "hero_30",
@@ -1009,7 +1099,10 @@
       },
       "talent": "狂怒期间获得等同于伤害增幅的治疗增幅。",
       "ultimate": "发射一个魔法铁球，对敌方造成160点魔法伤害，并连接自身与敌人3秒，期间自身受到伤害的20%由对方承受。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_30.png",
+      "talent_icon": "data/art/skills/hero_30_talent.png",
+      "ultimate_icon": "data/art/skills/hero_30_ultimate.png"
     },
     {
       "id": "hero_31",
@@ -1041,7 +1134,10 @@
       },
       "talent": "主动使用：选择一名场上英雄复制其天赋。（天赋大招不能复制同名英雄）",
       "ultimate": "主动使用：选择一名场上英雄复制其大招。（天赋大招不能复制同名英雄）",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_31.png",
+      "talent_icon": "data/art/skills/hero_31_talent.png",
+      "ultimate_icon": "data/art/skills/hero_31_ultimate.png"
     },
     {
       "id": "hero_32",
@@ -1073,7 +1169,10 @@
       },
       "talent": "护盾自然衰退降低15%",
       "ultimate": "召唤护盾法阵，每0.5秒获得65层护盾，持续2秒。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_32.png",
+      "talent_icon": "data/art/skills/hero_32_talent.png",
+      "ultimate_icon": "data/art/skills/hero_32_ultimate.png"
     },
     {
       "id": "plague_doctor",
@@ -1108,7 +1207,10 @@
       },
       "talent": "每当敌人受到中毒伤害时，自身回复该伤害15%的生命，至少回复1点。",
       "ultimate": "立即回复150点生命，同时抛出一枚毒气弹，对敌人施加100层中毒。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/plague_doctor.png",
+      "talent_icon": "data/art/skills/plague_doctor_talent.png",
+      "ultimate_icon": "data/art/skills/plague_doctor_ultimate.png"
     },
     {
       "id": "hero_34",
@@ -1140,7 +1242,10 @@
       },
       "talent": "每次释放大招后，提升30%攻击速度，持续3秒。",
       "ultimate": "召唤闪电瞬间打击敌人，造成200点魔法伤害，同时本场战斗增加自身6点攻击力，可叠加。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_34.png",
+      "talent_icon": "data/art/skills/hero_34_talent.png",
+      "ultimate_icon": "data/art/skills/hero_34_ultimate.png"
     },
     {
       "id": "hero_35",
@@ -1172,7 +1277,10 @@
       },
       "talent": "放人身上每有2层冰冻会使你的暴击伤害增加1%",
       "ultimate": "将敌人笼罩在冰霜之中，每.5秒施加25层冰冻，在此期间你造成的物理伤害必定暴击，持续2秒。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_35.png",
+      "talent_icon": "data/art/skills/hero_35_talent.png",
+      "ultimate_icon": "data/art/skills/hero_35_ultimate.png"
     },
     {
       "id": "hero_36",
@@ -1204,12 +1312,17 @@
       },
       "talent": "每当对敌人施加冰冻时，80%概率回复1点能量。",
       "ultimate": "释放5枚寒冰冲击敌人，每枚寒冰造成60点魔法伤害，敌人身上每有20层冰冻则额外召唤1枚寒冰。花费600解锁300",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_36.png",
+      "talent_icon": "data/art/skills/hero_36_talent.png",
+      "ultimate_icon": "data/art/skills/hero_36_ultimate.png"
     },
     {
       "id": "hero_37",
       "name": "炼金术士",
-      "aliases": [],
+      "aliases": [
+        "炼金术师"
+      ],
       "role": "易伤增幅",
       "difficulty": 2,
       "tier": "C",
@@ -1236,7 +1349,10 @@
       },
       "talent": "英雄每累计承受最大生命值10%的伤害就会对敌人施加10层易伤。",
       "ultimate": "每0.8秒回复50点生命值，持续4秒。期间施加的所有易伤额外增加5层。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_37.png",
+      "talent_icon": "data/art/skills/hero_37_talent.png",
+      "ultimate_icon": "data/art/skills/hero_37_ultimate.png"
     },
     {
       "id": "goblin_artisan",
@@ -1272,7 +1388,10 @@
       },
       "talent": "每拥有1个不同的技能使自身造成的魔法伤害增加2点。",
       "ultimate": "发射10枚火箭轰击敌人，每枚火箭造成（25+英雄等级*1.5）点物理伤害。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/goblin_artisan.png",
+      "talent_icon": "data/art/skills/goblin_artisan_talent.png",
+      "ultimate_icon": "data/art/skills/goblin_artisan_ultimate.png"
     },
     {
       "id": "spellbreaker",
@@ -1306,7 +1425,10 @@
       },
       "talent": "每次普通攻击时，100%概率减少敌人1点能量。",
       "ultimate": "凝聚虚空的能量轰击敌人，瞬间对敌人造成（300+[自身闪避-敌人闪避]*5）的魔法伤害。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/spellbreaker.png",
+      "talent_icon": "data/art/skills/spellbreaker_talent.png",
+      "ultimate_icon": "data/art/skills/spellbreaker_ultimate.png"
     },
     {
       "id": "hero_40",
@@ -1338,12 +1460,17 @@
       },
       "talent": "自身护盾每抵挡60点伤害精灵就会发射能量弹对敌人造成25点魔法伤害。",
       "ultimate": "召唤出一个生命值为50点的精灵并获得220层护盾，同时使自己的精灵伤害分担率降为15%，持续2秒。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_40.png",
+      "talent_icon": "data/art/skills/hero_40_talent.png",
+      "ultimate_icon": "data/art/skills/hero_40_ultimate.png"
     },
     {
       "id": "hero_41",
       "name": "月隐猎手",
-      "aliases": [],
+      "aliases": [
+        "月影猎手"
+      ],
       "role": "普攻输出",
       "difficulty": 2,
       "tier": "C",
@@ -1370,7 +1497,10 @@
       },
       "talent": "普通攻击命中敌人后会额外造成（敌人当前生命值*1.2%）的魔法伤害，并回复等量的生命值。",
       "ultimate": "进入狂暴姿态，偷取敌人20%的攻击速度，并使自身的生命回复效果+10，持续3S。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_41.png",
+      "talent_icon": "data/art/skills/hero_41_talent.png",
+      "ultimate_icon": "data/art/skills/hero_41_ultimate.png"
     },
     {
       "id": "hero_42",
@@ -1402,7 +1532,10 @@
       },
       "talent": "每当施加的初始易伤层数大于16层时，额外施加（3+英雄等级）层易伤。",
       "ultimate": "获得80层护盾并进入反击状态，每当护盾被消耗时会给敌人施加等值消耗层数但不超过30层的易伤，持续3秒。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_42.png",
+      "talent_icon": "data/art/skills/hero_42_talent.png",
+      "ultimate_icon": "data/art/skills/hero_42_ultimate.png"
     },
     {
       "id": "hero_43",
@@ -1434,7 +1567,10 @@
       },
       "talent": "狂怒状态下获得等同于伤害增幅的攻速增幅。",
       "ultimate": "为武器附魔，接下来的7次普攻每次命中时额外造成40点魔法伤害并增加20点怒气。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_43.png",
+      "talent_icon": "data/art/skills/hero_43_talent.png",
+      "ultimate_icon": "data/art/skills/hero_43_ultimate.png"
     },
     {
       "id": "hero_44",
@@ -1466,7 +1602,10 @@
       },
       "talent": "在精灵阵亡的一段时间后会将自身当前生命的20%重塑为新的精灵，英雄生命值小于200点时不可再重塑",
       "ultimate": "发出冲击波对敌人造成（150+本场战斗已召唤精灵数*30）点魔法伤害。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_44.png",
+      "talent_icon": "data/art/skills/hero_44_talent.png",
+      "ultimate_icon": "data/art/skills/hero_44_ultimate.png"
     },
     {
       "id": "hero_45",
@@ -1498,7 +1637,10 @@
       },
       "talent": "战斗结束后，获得战斗持续时间*2的金币（向上取整）。",
       "ultimate": "发射一个梨形能量球，对敌人造成（100+战斗持续时间*20）的魔法伤害。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_45.png",
+      "talent_icon": "data/art/skills/hero_45_talent.png",
+      "ultimate_icon": "data/art/skills/hero_45_ultimate.png"
     },
     {
       "id": "hero_46",
@@ -1530,7 +1672,10 @@
       },
       "talent": "每1秒，回复（8+敌人冰冻层数*25%）点生命。",
       "ultimate": "向敌人发出一颗法球，造成（300+法球移动期间回复生命值总量*80%）点魔法伤害。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_46.png",
+      "talent_icon": "data/art/skills/hero_46_talent.png",
+      "ultimate_icon": "data/art/skills/hero_46_ultimate.png"
     },
     {
       "id": "hero_47",
@@ -1561,7 +1706,10 @@
       },
       "talent": "自己的中毒伤害也能产生暴击，概率为固定20%",
       "ultimate": "站立于毒泽之上每0.5秒对敌人施加20层中毒，并使中毒结算频率加快50%，持续2.5秒。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_47.png",
+      "talent_icon": "data/art/skills/hero_47_talent.png",
+      "ultimate_icon": "data/art/skills/hero_47_ultimate.png"
     },
     {
       "id": "hero_48",
@@ -1593,7 +1741,10 @@
       },
       "talent": "每次普通攻击命中敌人时会额外施加（自身普攻次数-敌人普攻次数）层冰冻。",
       "ultimate": "为自己接下来的8次普通攻击提升100%攻击速度。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_48.png",
+      "talent_icon": "data/art/skills/hero_48_talent.png",
+      "ultimate_icon": "data/art/skills/hero_48_ultimate.png"
     },
     {
       "id": "hero_49",
@@ -1625,7 +1776,10 @@
       },
       "talent": "每获得100点怒气会发射一枚100点魔法伤害的子弹。单枚子弹对敌方英雄伤害超过120点时会再发射一枚子弹。",
       "ultimate": "发射一枚子弹并对敌人施加持续4秒的诅咒，每1秒施加30层易伤。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_49.png",
+      "talent_icon": "data/art/skills/hero_49_talent.png",
+      "ultimate_icon": "data/art/skills/hero_49_ultimate.png"
     },
     {
       "id": "hero_50",
@@ -1657,7 +1811,10 @@
       },
       "talent": "战斗中，回复生命值的25%会转化为自身最大生命值。",
       "ultimate": "召唤烈焰投向敌人，对敌人造成(200+双方最大生命值之和*4%）点魔法伤害。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_50.png",
+      "talent_icon": "data/art/skills/hero_50_talent.png",
+      "ultimate_icon": "data/art/skills/hero_50_ultimate.png"
     },
     {
       "id": "ghost_mother",
@@ -1693,7 +1850,10 @@
       },
       "talent": "每0.2秒额外回复（2*当前已损失生命百分比）点能量。",
       "ultimate": "派出恶灵飞向敌人造成（150+敌人最大生命值*10%）点魔法伤害，并偷取等同敌人受到伤害数值80%的最大生命值。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/ghost_mother.png",
+      "talent_icon": "data/art/skills/ghost_mother_talent.png",
+      "ultimate_icon": "data/art/skills/ghost_mother_ultimate.png"
     },
     {
       "id": "hero_52",
@@ -1725,7 +1885,10 @@
       },
       "talent": "每次暴击对敌人造成伤害后附加0.2秒眩晕。",
       "ultimate": "发射持续爆破弹，每0.2秒对敌人造成25点物理伤害，持续2秒。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_52.png",
+      "talent_icon": "data/art/skills/hero_52_talent.png",
+      "ultimate_icon": "data/art/skills/hero_52_ultimate.png"
     },
     {
       "id": "bounty_hunter",
@@ -1760,7 +1923,10 @@
       },
       "talent": "每回合获得3个普通技能时，获得40金币。",
       "ultimate": "向敌人发射5枚银弹，每发造成45点神圣伤害，敌人每拥有100金币则额外发射1枚子弹。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/bounty_hunter.png",
+      "talent_icon": "data/art/skills/bounty_hunter_talent.png",
+      "ultimate_icon": "data/art/skills/bounty_hunter_ultimate.png"
     },
     {
       "id": "hero_54",
@@ -1792,7 +1958,10 @@
       },
       "talent": "造成伤害时33%几率获得30层急速。",
       "ultimate": "召唤风暴围绕敌人，每0.5秒对敌方造成40点魔法伤害，持续3秒。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_54.png",
+      "talent_icon": "data/art/skills/hero_54_talent.png",
+      "ultimate_icon": "data/art/skills/hero_54_ultimate.png"
     },
     {
       "id": "hero_55",
@@ -1824,7 +1993,10 @@
       },
       "talent": "当你的护盾格挡伤害时，有(20+自身暴击*0.6）%的概率对敌人造成（1+本次格挡伤害*20%）的魔法伤害。",
       "ultimate": "向敌人投掷一个回旋盾牌，造成80点物理伤害，并在返回时为自已提供80层护盾。若此次伤害产生暴击，则再次投掷盾牌。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_55.png",
+      "talent_icon": "data/art/skills/hero_55_talent.png",
+      "ultimate_icon": "data/art/skills/hero_55_ultimate.png"
     },
     {
       "id": "hero_56",
@@ -1856,7 +2028,10 @@
       },
       "talent": "每获得一张克制技能时，奖励25金币。",
       "ultimate": "从天而降4把光剑，每把造成70点魔法伤害，每有一个满级的克制技能增加1把光剑。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_56.png",
+      "talent_icon": "data/art/skills/hero_56_talent.png",
+      "ultimate_icon": "data/art/skills/hero_56_ultimate.png"
     },
     {
       "id": "hero_57",
@@ -1888,7 +2063,10 @@
       },
       "talent": "每4秒释放一次能量护罩，持续吸收投射物并储存。",
       "ultimate": "瞬间对敌人造成220点魔法伤害，并将储存的所有投射物奉还给敌人。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_57.png",
+      "talent_icon": "data/art/skills/hero_57_talent.png",
+      "ultimate_icon": "data/art/skills/hero_57_ultimate.png"
     },
     {
       "id": "shadow_swordsman",
@@ -1923,7 +2101,10 @@
       },
       "talent": "每过3秒，获得（20+自身周期技能数*10）层急速。",
       "ultimate": "瞬间消耗自身30%急速，对敌人造成（150+本次技能消耗急速层数*200%）点魔法伤害。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/shadow_swordsman.png",
+      "talent_icon": "data/art/skills/shadow_swordsman_talent.png",
+      "ultimate_icon": "data/art/skills/shadow_swordsman_ultimate.png"
     },
     {
       "id": "hero_59",
@@ -1955,7 +2136,10 @@
       },
       "talent": "自身生命值≥60%（含满血）时，获得的回复量会转化为90%的护盾。",
       "ultimate": "治愈祷告大招每0.5秒回复自身85点生命值，持续2秒。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_59.png",
+      "talent_icon": "data/art/skills/hero_59_talent.png",
+      "ultimate_icon": "data/art/skills/hero_59_ultimate.png"
     },
     {
       "id": "hero_60",
@@ -1987,7 +2171,10 @@
       },
       "talent": "每次普攻会为召唤的第一只精灵永久增加生命值1点，在下次战斗时生效。",
       "ultimate": "攻击力增加30点，且自身每有只精灵，提升20%的攻速，持续3秒。",
-      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt"
+      "source": "选技英雄数据.xlsx / 卡牌库.xlsx / 游戏规则.txt",
+      "art": "data/art/heroes/hero_60.png",
+      "talent_icon": "data/art/skills/hero_60_talent.png",
+      "ultimate_icon": "data/art/skills/hero_60_ultimate.png"
     }
   ]
 }
